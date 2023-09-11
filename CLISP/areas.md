@@ -131,7 +131,7 @@ Para realizar el calculo del area de un circulo ocuparemos el siguiente codigo:
 1. Se define una funcion con el nombre ***areaCirculo***.
 2. Se despliega un mensaje con ***princ*** para que el usuario nos dé el radio del circulo.
 3. Con la funcion ***setq*** inicializamos una variable con el nombre *radio* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
-4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* 3.14 (* radio radio))` que estará elevando al cuadro el radio y luego multiplicandolo por pi.
+4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* 3.14 (* radio radio))` que estará elevando al cuadro el radio y luego multiplicandolo por Pi.
 5. El *resultado* se despliega en la consola.
 ___
 
@@ -182,4 +182,27 @@ Para realizar el calculo del area de un paralelogramo ocuparemos el siguiente co
 4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura del paralelogramo.
 5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* base altura)` la cual multiplicara la base por la altura y asi obtendremos el area del paralelogramo.
+9. El *resultado* se despliega en la consola.
+___
+
+## 8. Area de un ovalo
+
+Para realizar el calculo del area de un ovalo ocuparemos el siguiente codigo:
+
+~~~
+(defun areaOvalo()
+    (princ "Dame la longitud del primero radio: ")
+    (setq r1 (read))
+    (princ "Dame la longitud del segundo radio: ")
+    (setq r2 (read))
+    (setq resultado (* r1 r2 3.14))
+)
+~~~
+
+1. Se define una funcion con el nombre ***areaOvalo***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud del primero radio.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *r1* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud del segundo radio.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *r2* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* r1 r2 3.14)` que es multiplicar los dos radios y el resultado por Pi.
 9. El *resultado* se despliega en la consola.

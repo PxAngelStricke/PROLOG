@@ -55,5 +55,17 @@
 )
 
 (defun areaParalelogramo()
-    
+    (princ "Dame la longitud de la base: ")
+    (setq base (read))
+    (princ "Dame la longitud de la altura: ")
+    (setq altura (read))
+    (setq resultado (* base altura))
+)
+
+(defun areaOvalo()
+    (princ "Dame la longitud del primero radio: ")
+    (setq r1 (read))
+    (princ "Dame la longitud del segundo radio: ")
+    (setq r2 (read))
+    (setq resultado (* r1 r2 3.14))
 )
