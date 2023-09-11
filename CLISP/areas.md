@@ -40,3 +40,26 @@ Para realizar el calculo del area de un traingulo ocuparemos el siguiente codigo
 5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 6. Con la funcion ***setq*** inicializamos una nueva variable con el nombre *resultado* y realizamos la siguiente operacion de manera post-orden para obtener el area del triangulo: `(/ (* base altura) 2))` esto equivale a multiplicar la base por la altura y luego dividir el resultado entre 2.
 7. El resultado se despliega en la consola.
+___
+
+## Area de un rectangulo
+
+Para realizar el calculo del area de un rectangulo ocuparemos el siguiente codigo:
+
+~~~
+(defun areaRectangulo()
+    (princ "Dame la longitud de la base: ")
+    (setq base (read))
+    (princ "Dame la longitud de la altura: ")
+    (setq altura (read))
+    (setq resultado (* base altura))
+)
+~~~
+
+1. Se define una funcion con el nombre ***areaRectangulo***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud de la base del rectangulo.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *base* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura del rectangulo.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Con la funcion ***setq*** incializaremos una nueva variable con el nombre *resultado* y realizaremos la operacion `(* base altura)` que no es otra cosa mas que multiplicar la base por la altura del rectangulo y asi obtendremos el area del rectangulo.
+7. El resultado se despliega en la consola.
