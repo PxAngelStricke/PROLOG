@@ -43,3 +43,13 @@
     (setq radio (read))
     (setq resultado (* 3.14 (* radio radio)))
 )
+
+(defun areaPoligonoReg()
+    (princ "Dame el numero de lados que tiene el poligono: ")
+    (setq lados (read))
+    (princ "Dame la longitud de la base de uno de los lados: ")
+    (setq base (read))
+    (princ "Dame la longitud del apotema: ")
+    (setq apotema (read))
+    (setq resultado (/ (* (* lados base) apotema) 2))
+)
