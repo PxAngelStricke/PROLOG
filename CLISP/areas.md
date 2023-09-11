@@ -63,3 +63,53 @@ Para realizar el calculo del area de un rectangulo ocuparemos el siguiente codig
 5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 6. Con la funcion ***setq*** incializaremos una nueva variable con el nombre *resultado* y realizaremos la operacion `(* base altura)` que no es otra cosa mas que multiplicar la base por la altura del rectangulo y asi obtendremos el area del rectangulo.
 7. El resultado se despliega en la consola.
+___
+
+## Area de un rombo
+
+Para realizar el calculo del area de un rombo ocuparemos el siguiente codigo:
+
+~~~
+(defun areaRombo()
+    (princ "Dame la longitud de la diagonal mayor: ")
+    (setq dMayor (read))
+    (princ "Dame la longitud de la diagonal menor: ")
+    (setq dMenor (read))
+    (setq resultado (/ (* dMayor dMenor) 2))
+)
+~~~
+
+1. Se define una funcion con el nombre ***areaRombo***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud de la diagonal mayor del rombo.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *dMayor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la diagonal menor del rombo.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *dMenor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* dMayor dMenor) 2))` la cual se realizara de manera post-orden donde primero multiplicara la diagonal mayor por la diagonal menor y el resultado lo dividira entre 2.
+7. El resultado se despliega en la consola.
+___
+
+## Area de un trapecio
+
+Para realizar el calculo del area de un trapecio ocuparemos el siguiente codigo:
+
+~~~
+(defun areaTrapecio()
+    (princ "Dame la longitud de la base mayor: ")
+    (setq bMayor (read))
+    (princ "Dame la longitud de la base menor: ")
+    (setq bMenor (read))
+    (princ "Dale la longitud de la altura: ")
+    (setq altura (read))
+    (setq resultado (/ (* (+ bMayor bMenor) altura) 2))
+)
+~~~
+
+1. Se define una funcion con el nombre ***areaTrapecio***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud de la base mayor del trapecio.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *bMayor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la base menor del trapecio.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *bMenor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura del trapecio.
+7. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+8. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* (+ bMayor bMenor) altura) 2))` que recordemos hara en post-orden, iniciando primero por realizar la suma de las bases, despues multiplicara el resultado por la altura del trapecio y finalmente el resultado lo dividira entre 2.
+9. El resultado se despliega en la consola.
