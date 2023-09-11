@@ -1,7 +1,0 @@
-(defun sumaNumero()
-    (princ "Dame la longitud de la base: ")
-    (setq num1 (read))
-    (princ "Dame la altura: ")
-    (setq num2 (read))
-    (setq resultado (* num1 num2))
-)
