@@ -1,5 +1,0 @@
-(defun areaCubo()
-    (princ "Dame la longitud de uno de los lados: ")
-    (setq num1 (read))
-    (setq resultado (* num1 num1))
-)
