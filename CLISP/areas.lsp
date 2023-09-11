@@ -53,3 +53,7 @@
     (setq apotema (read))
     (setq resultado (/ (* (* lados base) apotema) 2))
 )
+
+(defun areaParalelogramo()
+    
+)

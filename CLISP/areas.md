@@ -160,3 +160,26 @@ Para realizar el calculo del area de un poligono regular ocuparemos el siguiente
 7. Con la funcion ***setq*** inicializamos una variable con el nombre *apotema* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 8. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* (* lados base) apotema) 2)` que en un inicio obtendremos el perimetro del poligono ya que multiplicaremos el numero de lados que tiene por la longitud de la base de uno de los lados, el resultado lo multiplicaremos por el apotema y finalmente lo dividiremos entre 2 para asi obtener el area del poligono regular.
 9. El *resultado* se despliega en la consola.
+___
+
+## 8. Area de un paralelogramo
+
+Para realizar el calculo del area de un paralelogramo ocuparemos el siguiente codigo:
+
+~~~
+(defun areaParalelogramo()
+    (princ "Dame la longitud de la base: ")
+    (setq base (read))
+    (princ "Dame la longitud de la altura: ")
+    (setq altura (read))
+    (setq resultado (* base altura))
+)
+~~~
+
+1. Se define una funcion con el nombre ***areaParalelogramo***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud de la base del paralelogramo.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *base* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura del paralelogramo.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* base altura)` la cual multiplicara la base por la altura y asi obtendremos el area del paralelogramo.
+9. El *resultado* se despliega en la consola.
