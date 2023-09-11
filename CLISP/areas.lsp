@@ -69,3 +69,11 @@
     (setq r2 (read))
     (setq resultado (* r1 r2 3.14))
 )
+
+(defun areaCometa()
+    (princ "Dame la longitud de la diagonal mayor: ")
+    (setq diagMayor (read))
+    (princ "Dame la longitud de la diagonal menor: ")
+    (setq diagMenor (read))
+    (setq resultado (/ (* diagMayor diagMenor) 2))
+)

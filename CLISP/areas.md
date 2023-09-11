@@ -182,10 +182,10 @@ Para realizar el calculo del area de un paralelogramo ocuparemos el siguiente co
 4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura del paralelogramo.
 5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* base altura)` la cual multiplicara la base por la altura y asi obtendremos el area del paralelogramo.
-9. El *resultado* se despliega en la consola.
+7. El *resultado* se despliega en la consola.
 ___
 
-## 8. Area de un ovalo
+## 9. Area de un ovalo
 
 Para realizar el calculo del area de un ovalo ocuparemos el siguiente codigo:
 
@@ -205,4 +205,26 @@ Para realizar el calculo del area de un ovalo ocuparemos el siguiente codigo:
 4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud del segundo radio.
 5. Con la funcion ***setq*** inicializamos una variable con el nombre *r2* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* r1 r2 3.14)` que es multiplicar los dos radios y el resultado por Pi.
-9. El *resultado* se despliega en la consola.
+7. El *resultado* se despliega en la consola.
+
+## 10. Area de un cometa
+
+Para realizar el calculo del area de un cometa ocuparemos el siguiente codigo:
+
+~~~
+(defun areaCometa()
+    (princ "Dame la longitud de la diagonal mayor: ")
+    (setq diagMayor (read))
+    (princ "Dame la longitud de la diagonal menor: ")
+    (setq diagMenor (read))
+    (setq resultado (/ (* diagMayor diagMenor) 2))
+)
+~~~
+
+1. Se define una funcion con el nombre ***areaCometa***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud de la diagonal mayor del cometa.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *diagMayor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la diagonal menor del cometa.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *diagMenor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* diagMayor diagMenor) 2)` esto hará que primero se multipliquen las diagonales y luego se divida entre 2 y esto se almacene en la variable *resultado*.
+7. El *resultado* se despliega en la consola.
