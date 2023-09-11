@@ -37,3 +37,9 @@
     (setq altura (read))
     (setq resultado (/ (* (+ bMayor bMenor) altura) 2))
 )
+
+(defun areaCirculo() 
+    (princ "Dame el radio del circulo: ")
+    (setq radio (read))
+    (setq resultado (* 3.14 (* radio radio)))
+)

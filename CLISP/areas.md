@@ -1,6 +1,6 @@
 # Areas de figuras
 
-## Area de un cuadrado
+## 1. Area de un cuadrado
 
 La primera figura es un cuadrado para lo cual ocuparemos el siguiente codigo: 
 
@@ -19,7 +19,7 @@ La primera figura es un cuadrado para lo cual ocuparemos el siguiente codigo:
 5. En el caso del cubo solo es necesario pedir la longitud de uno de sus lados ya que para encontrar el area de esta figura solo es necesario multiplicar por si mismo la longitud de uno de sus lados.
 ___
 
-## Area de un triangulo
+## 2. Area de un triangulo
 
 Para realizar el calculo del area de un traingulo ocuparemos el siguiente codigo:
 
@@ -38,11 +38,11 @@ Para realizar el calculo del area de un traingulo ocuparemos el siguiente codigo
 3. Con la funcion ***setq*** inicializamos una variable con el nombre *base* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura del triangulo.
 5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
-6. Con la funcion ***setq*** inicializamos una nueva variable con el nombre *resultado* y realizamos la siguiente operacion de manera post-orden para obtener el area del triangulo: `(/ (* base altura) 2))` esto equivale a multiplicar la base por la altura y luego dividir el resultado entre 2.
+6. Con la funcion ***setq*** inicializamos una nueva variable con el nombre *resultado* y realizamos la siguiente operacion de manera post-orden para obtener el area del triangulo: `(/ (* base altura) 2)` esto equivale a multiplicar la base por la altura y luego dividir el resultado entre 2.
 7. El resultado se despliega en la consola.
 ___
 
-## Area de un rectangulo
+## 3. Area de un rectangulo
 
 Para realizar el calculo del area de un rectangulo ocuparemos el siguiente codigo:
 
@@ -65,7 +65,7 @@ Para realizar el calculo del area de un rectangulo ocuparemos el siguiente codig
 7. El resultado se despliega en la consola.
 ___
 
-## Area de un rombo
+## 4. Area de un rombo
 
 Para realizar el calculo del area de un rombo ocuparemos el siguiente codigo:
 
@@ -84,11 +84,11 @@ Para realizar el calculo del area de un rombo ocuparemos el siguiente codigo:
 3. Con la funcion ***setq*** inicializamos una variable con el nombre *dMayor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la diagonal menor del rombo.
 5. Con la funcion ***setq*** inicializamos una variable con el nombre *dMenor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
-6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* dMayor dMenor) 2))` la cual se realizara de manera post-orden donde primero multiplicara la diagonal mayor por la diagonal menor y el resultado lo dividira entre 2.
+6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* dMayor dMenor) 2)` la cual se realizara de manera post-orden donde primero multiplicara la diagonal mayor por la diagonal menor y el resultado lo dividira entre 2.
 7. El resultado se despliega en la consola.
 ___
 
-## Area de un trapecio
+## 5. Area de un trapecio
 
 Para realizar el calculo del area de un trapecio ocuparemos el siguiente codigo:
 
@@ -111,5 +111,24 @@ Para realizar el calculo del area de un trapecio ocuparemos el siguiente codigo:
 5. Con la funcion ***setq*** inicializamos una variable con el nombre *bMenor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 6. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura del trapecio.
 7. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
-8. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* (+ bMayor bMenor) altura) 2))` que recordemos hara en post-orden, iniciando primero por realizar la suma de las bases, despues multiplicara el resultado por la altura del trapecio y finalmente el resultado lo dividira entre 2.
+8. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* (+ bMayor bMenor) altura) 2)` que recordemos hara en post-orden, iniciando primero por realizar la suma de las bases, despues multiplicara el resultado por la altura del trapecio y finalmente el resultado lo dividira entre 2.
 9. El resultado se despliega en la consola.
+___
+
+## 6. Area de un circulo
+
+Para realizar el calculo del area de un circulo ocuparemos el siguiente codigo:
+
+~~~
+(defun areaCirculo() 
+    (princ "Dame el radio del circulo: ")
+    (setq radio (read))
+    (setq resultado (* 3.14 (* radio radio)))
+)
+~~~
+
+1. Se define una funcion con el nombre ***areaCirculo***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé el radio del circulo.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *radio* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* 3.14 (* radio radio))` que estara elevando al cuadro el radio y luego multiplicandolo por pi.
+5. El resultado se despliega en la consola.
