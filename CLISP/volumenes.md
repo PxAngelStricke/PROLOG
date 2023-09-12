@@ -61,3 +61,34 @@ Para realizar el calculo del volumen de un cubo usaremos el siguiente codigo:
 4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* lado lado lado)` la cual elevara al cubo la longitud de uno de los lados del cubo y asi obtendremos el volumen de la figura.
 5. El *resultado* se despliega en la consola.
 ___
+
+## 3. Volumen de un cilindro
+
+Para realizar el calculo del volumen de un cilindro usaremos el siguiente codigo:
+
+~~~
+(defun volumCilindro ()
+    (princ "Dame el radio de la base: ")
+    (setq radio (read))
+    (princ "Dame la altura del cilindro: ")
+    (setq altura (read))
+    (setq resultado (* 3.14 (* radio radio) altura))
+)
+~~~
+
+### Formula para obtener el volumen de un cilindro:
+
+![Formula para volumen de un cilindro](https://www.neurochispas.com/wp-content/uploads/2021/03/caracteristicas-de-un-cilindro.png)
+
+`Fórmula del volumen = π * r2 * h`
+
+### Funcionamineto del codigo:
+
+1. Se define una funcion con el nombre ***volumCilindro***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud del radio de la base del cilindro.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *radio* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura del cilindro.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* 3.14 (* radio radio) altura)` en donde primero se elevara al cuadrado el radio, despues se multiplicara Pi por el radio al cuadrado y por la altura, y asi obtendremos el volumen del cilindro.
+7. El *resultado* se despliega en la consola.
+___

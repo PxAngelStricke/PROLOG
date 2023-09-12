@@ -15,3 +15,12 @@
     (setq lado (read))
     (setq resultado (* lado lado lado))
 )
+
+; 3. Volumen de un cilindro
+(defun volumCilindro ()
+    (princ "Dame el radio de la base: ")
+    (setq radio (read))
+    (princ "Dame la altura del cilindro: ")
+    (setq altura (read))
+    (setq resultado (* 3.14 (* radio radio) altura))
+)
