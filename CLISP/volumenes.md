@@ -18,10 +18,10 @@ Para realizar el calculo del volumen de un prisma rectangular usaremos el siguie
 
 ### Formula para obtener el volumen de un prisma rectangular:
 
-!(Formula para volumen de un prisma rectangular)[https://www.neurochispas.com/wp-content/uploads/2021/04/prisma-rectangular-con-sus-dimensiones.png]
+![Formula para volumen de un prisma rectangular](https://www.neurochispas.com/wp-content/uploads/2021/04/prisma-rectangular-con-sus-dimensiones.png)
 
 ### Funcionamineto del codigo:
- 
+
 1. Se define una funcion con el nombre ***volumPrisRectan***.
 2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud del ancho del prisma.
 3. Con la funcion ***setq*** inicializamos una variable con el nombre *ancho* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
