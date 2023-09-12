@@ -24,3 +24,10 @@
     (setq altura (read))
     (setq resultado (* 3.14 (* radio radio) altura))
 )
+
+; 4. Volumen de una esfera
+(defun volumEsfera ()
+    (princ "Dame el radio de la esfera: ")
+    (setq radio (read))
+    (setq resultado (* (/ 4 3) 3.14 (* radio radio radio)))
+)
