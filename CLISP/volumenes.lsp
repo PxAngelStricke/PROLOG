@@ -38,3 +38,12 @@
     (setq lado (read))
     (setq resultado (/ (* lado lado lado) (* 6 (sqrt 2))))
 )
+
+; 6. Volumen de un cono circular
+(defun volumConoCirc ()
+    (princ "Dame la longitud del radio de la base: ")
+    (setq radio (read))
+    (princ "Dame la longitud de la altura del cono: ")
+    (setq altura (read))
+    (setq resultado (* (/ 1 3) 3.14 (* radio radio) altura))
+)

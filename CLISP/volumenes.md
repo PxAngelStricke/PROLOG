@@ -124,7 +124,7 @@ Para realizar el calculo del volumen de una esfera usaremos el siguiente codigo:
 5. El *resultado* se despliega en la consola.
 ___
 
-## 4. Volumen de un tetraedro
+## 5. Volumen de un tetraedro
 
 Para realizar el calculo del volumen de un tetraedro usaremos el siguiente codigo:
 
@@ -147,11 +147,46 @@ Para realizar el calculo del volumen de un tetraedro usaremos el siguiente codig
 1. Se define una funcion con el nombre ***volumTetraedro***.
 2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud de uno de los lados del tetraedro.
 3. Con la funcion ***setq*** inicializamos una variable con el nombre *lado* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
-4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* lado lado lado) (* 6 (sqrt 2)))`
+4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* lado lado lado) (* 6 (sqrt 2)))`:
     - Primero obtendremos el valor de elevar al cubo el valor del radio.
     - Obtendremos el resultado de obtener la raiz cuadrada de 2.
     - Obtendremos el resultado de multiplicar 6 por el resultado anterior.
     - Dividiremos el resultado de elevar al cubo la radio y de multiplicar el 6 por la raiz cuadrado de 2.
     - Listo ya tenemos el volumen de un tetraedro.
 5. El *resultado* se despliega en la consola.
+___
+
+## 6. Volumen de un cono circular
+
+Para realizar el calculo del volumen de un cono circular usaremos el siguiente codigo:
+
+~~~
+(defun volumConoCirc ()
+    (princ "Dame la longitud del radio de la base: ")
+    (setq radio (read))
+    (princ "Dame la longitud de la altura del cono: ")
+    (setq altura (read))
+    (setq resultado (* (/ 1 3) 3.14 (* radio radio) altura))
+)
+~~~
+
+### Formula para obtener el volumen de un cono circular:
+
+![Formula para volumen de un cono circular](https://www.problemasyecuaciones.com/geometria3D/volumen/cono/t0.png)
+
+`Fórmula del Volumen = (1⁄3) * π * r² * h`
+
+### Funcionamineto del codigo:
+
+1. Se define una funcion con el nombre ***volumConoCirc***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud del radio de la base del cono.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *radio* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura del cono circular.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* (/ 1 3) 3.14 (* radio radio) altura)`:
+    - Primero obtenemos el valor de la division de 1 / 3.
+    - Obtenemos el resultado de elevar al cuadrado el radio.
+    - Multiplicamos el resultado de la division, de elevar al cuadrado el radio, de la altura y Pi.
+    - Listo ya obtuvimos el volumen de un cono cricular.
+7. El *resultado* se despliega en la consola.
 ___
