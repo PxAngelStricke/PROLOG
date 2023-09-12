@@ -31,3 +31,10 @@
     (setq radio (read))
     (setq resultado (* (/ 4 3) 3.14 (* radio radio radio)))
 )
+
+; 5. Volumen de un tetraedro
+(defun volumTetraedro ()
+    (princ "Dame la longitud de uno de los lados del tetraedro: ")
+    (setq lado (read))
+    (setq resultado (/ (* lado lado lado) (* 6 (sqrt 2))))
+)

@@ -93,7 +93,7 @@ Para realizar el calculo del volumen de un cilindro usaremos el siguiente codigo
 7. El *resultado* se despliega en la consola.
 ___
 
-## 3. Volumen de una esfera
+## 4. Volumen de una esfera
 
 Para realizar el calculo del volumen de una esfera usaremos el siguiente codigo:
 
@@ -117,9 +117,41 @@ Para realizar el calculo del volumen de una esfera usaremos el siguiente codigo:
 2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud del radio de la esfera.
 3. Con la funcion ***setq*** inicializamos una variable con el nombre *radio* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
 4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* (/ 4 3) 3.14 (* radio radio radio))`:
-    - Obtendremos el resutlado de la division (4⁄3).
+    - Obtenemos el resutlado de la division (4⁄3).
     - Elevamos al cubo el radio multiplicandolo 3 veces por si mismo.
     - Multiplicamos los resultados por Pi.
     - Listo, hemos obtenido el volumen de una esfera.
+5. El *resultado* se despliega en la consola.
+___
+
+## 4. Volumen de un tetraedro
+
+Para realizar el calculo del volumen de un tetraedro usaremos el siguiente codigo:
+
+~~~
+(defun volumTetraedro ()
+    (princ "Dame la longitud de uno de los lados del tetraedro: ")
+    (setq lado (read))
+    (setq resultado (/ (* lado lado lado) (* 6 (sqrt 2))))
+)
+~~~
+
+### Formula para obtener el volumen de un tetraedro:
+
+![Formula para volumen de un tetraedro](https://www.neurochispas.com/wp-content/uploads/2021/05/dimensiones-de-un-tetraedro.png)
+
+`Fórmula del Volumen = (a³ ⁄ 6 * √2)`
+
+### Funcionamineto del codigo:
+
+1. Se define una funcion con el nombre ***volumTetraedro***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud de uno de los lados del tetraedro.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *lado* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(/ (* lado lado lado) (* 6 (sqrt 2)))`
+    - Primero obtendremos el valor de elevar al cubo el valor del radio.
+    - Obtendremos el resultado de obtener la raiz cuadrada de 2.
+    - Obtendremos el resultado de multiplicar 6 por el resultado anterior.
+    - Dividiremos el resultado de elevar al cubo la radio y de multiplicar el 6 por la raiz cuadrado de 2.
+    - Listo ya tenemos el volumen de un tetraedro.
 5. El *resultado* se despliega en la consola.
 ___
