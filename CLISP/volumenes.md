@@ -19,6 +19,7 @@ Para realizar el calculo del volumen de un prisma rectangular usaremos el siguie
 ### Formula para obtener el volumen de un prisma rectangular:
 
 ![Formula para volumen de un prisma rectangular](https://www.neurochispas.com/wp-content/uploads/2021/04/prisma-rectangular-con-sus-dimensiones.png)
+
 `Fórmula del Volumen = lbh`
 
 ### Funcionamineto del codigo:
