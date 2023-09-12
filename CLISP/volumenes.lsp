@@ -8,3 +8,10 @@
     (setq altura (read))
     (setq resultado (* ancho base altura))
 )
+
+; 2. Volumen de un cubo
+(defun volumCubo ()
+    (princ "Dame la longitud de uno de los lados del cubo: ")
+    (setq lado (read))
+    (setq resultado (* lado lado lado))
+)
