@@ -18,7 +18,7 @@ Para realizar el calculo del volumen de un prisma rectangular usaremos el siguie
 
 ### Formula para obtener el volumen de un prisma rectangular:
 
-![Formula para volumen de un prisma rectangular](https://www.neurochispas.com/wp-content/uploads/2021/04/prisma-rectangular-con-sus-dimensiones.png){width=200px height=150px}
+![Formula para volumen de un prisma rectangular](https://www.neurochispas.com/wp-content/uploads/2021/04/prisma-rectangular-con-sus-dimensiones.png)
 
 `Fórmula del Volumen = l * b * h`
 
@@ -49,7 +49,7 @@ Para realizar el calculo del volumen de un cubo usaremos el siguiente codigo:
 
 ### Formula para obtener el volumen de un cubo:
 
-![Formula para volumen de un cubo](https://www.neurochispas.com/wp-content/uploads/2021/03/cubo-con-sus-lados.png){width=200px height=150px}
+![Formula para volumen de un cubo](https://www.neurochispas.com/wp-content/uploads/2021/03/cubo-con-sus-lados.png)
 
 `Fórmula del Volumen = a³`
 
@@ -78,7 +78,7 @@ Para realizar el calculo del volumen de un cilindro usaremos el siguiente codigo
 
 ### Formula para obtener el volumen de un cilindro:
 
-![Formula para volumen de un cilindro](https://www.neurochispas.com/wp-content/uploads/2021/03/caracteristicas-de-un-cilindro.png){width=200px height=150px}
+![Formula para volumen de un cilindro](https://www.neurochispas.com/wp-content/uploads/2021/03/caracteristicas-de-un-cilindro.png)
 
 `Fórmula del volumen = π * r² * h`
 
@@ -107,7 +107,7 @@ Para realizar el calculo del volumen de una esfera usaremos el siguiente codigo:
 
 ### Formula para obtener el volumen de una esfera:
 
-![Formula para volumen de una esfera](https://www.neurochispas.com/wp-content/uploads/2021/04/diagrama-de-area-superficial-de-esfera-con-radio.png){width=200px height=150px}
+![Formula para volumen de una esfera](https://www.neurochispas.com/wp-content/uploads/2021/04/diagrama-de-area-superficial-de-esfera-con-radio.png)
 
 `Fórmula del volumen = (4⁄3) * π * r³`
 
@@ -138,7 +138,7 @@ Para realizar el calculo del volumen de un tetraedro usaremos el siguiente codig
 
 ### Formula para obtener el volumen de un tetraedro:
 
-![Formula para volumen de un tetraedro](https://www.neurochispas.com/wp-content/uploads/2021/05/dimensiones-de-un-tetraedro.png){width=200px height=150px}
+![Formula para volumen de un tetraedro](https://www.neurochispas.com/wp-content/uploads/2021/05/dimensiones-de-un-tetraedro.png)
 
 `Fórmula del Volumen = (a³ ⁄ 6 * √2)`
 
@@ -172,7 +172,7 @@ Para realizar el calculo del volumen de un cono circular usaremos el siguiente c
 
 ### Formula para obtener el volumen de un cono circular:
 
-![Formula para volumen de un cono circular](https://www.problemasyecuaciones.com/geometria3D/volumen/cono/t0.png){width=200px height=150px}
+![Formula para volumen de un cono circular](https://www.problemasyecuaciones.com/geometria3D/volumen/cono/t0.png)
 
 `Fórmula del Volumen = (1⁄3) * π * r² * h`
 
@@ -207,7 +207,7 @@ Para realizar el calculo del volumen de una piramide usaremos el siguiente codig
 
 ### Formula para obtener el volumen de una piramide:
 
-![Formula para volumen de una piramide](https://i.ytimg.com/vi/qKsq_Vk9Y6A/maxresdefault.jpg){width=200px height=150px}
+![Formula para volumen de una piramide](https://i.ytimg.com/vi/qKsq_Vk9Y6A/maxresdefault.jpg)
 
 `Fórmula del Volumen = (1⁄3) * A.base * h`
 
@@ -243,7 +243,7 @@ Para realizar el calculo del volumen de un cilindro hueco usaremos el siguiente 
 
 ### Formula para obtener el volumen de un cilindro hueco:
 
-![Formula para volumen de un cilindro hueco](https://www.areasyvolumenes.net/wp-content/uploads/2022/09/volumen-de-un-cilindro-hueco.png){width=200px height=150px}
+![Formula para volumen de un cilindro hueco](https://www.areasyvolumenes.net/wp-content/uploads/2022/09/volumen-de-un-cilindro-hueco.png)
 
 `Fórmula del Volumen = π * h * (R² - r²)`
 
@@ -278,7 +278,7 @@ Para realizar el calculo del volumen de un octaedro usaremos el siguiente codigo
 
 ### Formula para obtener el volumen de un octaedro:
 
-![Formula para volumen de un octaedro](https://i.ytimg.com/vi/nN7Ojg5nppw/maxresdefault.jpg){width=200px height=150px}
+![Formula para volumen de un octaedro](https://i.ytimg.com/vi/nN7Ojg5nppw/maxresdefault.jpg)
 
 `Fórmula del Volumen = (1⁄3) * √2 * a³`
 
@@ -310,7 +310,7 @@ Para realizar el calculo del volumen de un isocaedro usaremos el siguiente codig
 
 ### Formula para obtener el volumen de un isocaedro:
 
-![Formula para volumen de un isocaedro](https://www.areasyvolumenes.net/wp-content/uploads/2022/08/volumen-de-un-icosaedro.png){width=200px height=150px}
+![Formula para volumen de un isocaedro](https://www.areasyvolumenes.net/wp-content/uploads/2022/08/volumen-de-un-icosaedro.png)
 
 `Fórmula del Volumen = (5⁄12) * (3 + √5) * a³`
 
