@@ -190,3 +190,36 @@ Para realizar el calculo del volumen de un cono circular usaremos el siguiente c
     - Listo ya obtuvimos el volumen de un cono cricular.
 7. El *resultado* se despliega en la consola.
 ___
+
+## 7. Volumen de una piramide
+
+Para realizar el calculo del volumen de una piramide usaremos el siguiente codigo:
+
+~~~
+(defun volumPiramide ()
+    (princ "Dame el ara de la base: ")
+    (setq aBase (read))
+    (princ "Dame la altura de la piramide: ")
+    (setq altura (read))
+    (setq resultado (* (/ 1 3) aBase altura))
+)
+~~~
+
+### Formula para obtener el volumen de una piramide:
+
+![Formula para volumen de una piramide](https://i.ytimg.com/vi/qKsq_Vk9Y6A/maxresdefault.jpg)
+
+`Fórmula del Volumen = (1⁄3) * A.base * h`
+
+### Funcionamineto del codigo:
+
+1. Se define una funcion con el nombre ***volumPiramide***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé el area de la base de la piramide.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *aBase* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la longitud de la altura de la piramide.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* (/ 1 3) aBase altura)`:
+    - Primero obtenemos el resultado de dividir 1 entre 3.
+    - Multiplicamos el resultado antes obtenido por la base y la altura.
+    - Listo, ya obtuvimos el volumen de una piramide cuadrangular.
+7. El *resultado* se despliega en la consola.

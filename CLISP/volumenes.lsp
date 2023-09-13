@@ -47,3 +47,12 @@
     (setq altura (read))
     (setq resultado (* (/ 1 3) 3.14 (* radio radio) altura))
 )
+
+; 7. Volumen de una piramide
+(defun volumPiramide ()
+    (princ "Dame el ara de la base: ")
+    (setq aBase (read))
+    (princ "Dame la altura de la piramide: ")
+    (setq altura (read))
+    (setq resultado (* (/ 1 3) aBase altura))
+)
