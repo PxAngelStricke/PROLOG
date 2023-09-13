@@ -295,3 +295,34 @@ Para realizar el calculo del volumen de un octaedro usaremos el siguiente codigo
     - Listo, ya obtuvimos el volumen de un octaedro.
 5. El *resultado* se despliega en la consola.
 ___
+
+## 10. Volumen de un isocaedro
+
+Para realizar el calculo del volumen de un isocaedro usaremos el siguiente codigo:
+
+~~~
+(defun volumIcosaedro ()
+    (princ "Dame la longitud de uno de sus lados: ")
+    (setq lados (read))
+    (setq resultado (* (/ 5 12) (+ 3 (sqrt 5)) (* lados lados lados)))
+)
+~~~
+
+### Formula para obtener el volumen de un isocaedro:
+
+![Formula para volumen de un isocaedro](https://www.areasyvolumenes.net/wp-content/uploads/2022/08/volumen-de-un-icosaedro.png)
+
+`Fórmula del Volumen = (5⁄12) * (3 + √5) * a³`
+
+### Funcionamineto del codigo:
+
+1. Se define una funcion con el nombre ***volumIcosaedro***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud de uno de sus lados.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *lados* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* (/ 5 12) (+ 3 (sqrt 5)) (* lados lados lados))`:
+    - Primero obtendremos el resultado de dividir 5 entre 12.
+    - Obtenemos el resultado de sumar 3 más la raiz cuadrada de 5.
+    - Obtenemos el resultado de elevar al cubo la longitud de uno de los lados del isocaedro.
+    - Multiplicamos todos los resutlados anteriores.
+    - Listo, ya obtuvimos el volumen de un isocaedro.
+5. El *resultado* se despliega en la consola.

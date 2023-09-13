@@ -74,3 +74,10 @@
     (setq lados (read))
     (setq resultado (* (/ 1 3) (sqrt 2) (* lados lados lados)))
 )
+
+; 10. volumen de un icosaedro
+(defun volumIcosaedro ()
+    (princ "Dame la longitud de uno de sus lados: ")
+    (setq lados (read))
+    (setq resultado (* (/ 5 12) (+ 3 (sqrt 5)) (* lados lados lados)))
+)
