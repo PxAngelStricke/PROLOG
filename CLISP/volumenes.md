@@ -18,7 +18,7 @@ Para realizar el calculo del volumen de un prisma rectangular usaremos el siguie
 
 ### Formula para obtener el volumen de un prisma rectangular:
 
-![Formula para volumen de un prisma rectangular](https://www.neurochispas.com/wp-content/uploads/2021/04/prisma-rectangular-con-sus-dimensiones.png)
+![Formula para volumen de un prisma rectangular](https://www.neurochispas.com/wp-content/uploads/2021/04/prisma-rectangular-con-sus-dimensiones.png){width=300px height=200px}
 
 `Fórmula del Volumen = l * b * h`
 
@@ -310,7 +310,7 @@ Para realizar el calculo del volumen de un isocaedro usaremos el siguiente codig
 
 ### Formula para obtener el volumen de un isocaedro:
 
-![Formula para volumen de un isocaedro](https://www.areasyvolumenes.net/wp-content/uploads/2022/08/volumen-de-un-icosaedro.png)
+![Formula para volumen de un isocaedro](https://www.areasyvolumenes.net/wp-content/uploads/2022/08/volumen-de-un-icosaedro.png){width=300px height=200px}
 
 `Fórmula del Volumen = (5⁄12) * (3 + √5) * a³`
 
