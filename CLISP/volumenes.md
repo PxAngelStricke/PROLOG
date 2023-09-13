@@ -223,3 +223,43 @@ Para realizar el calculo del volumen de una piramide usaremos el siguiente codig
     - Multiplicamos el resultado antes obtenido por la base y la altura.
     - Listo, ya obtuvimos el volumen de una piramide cuadrangular.
 7. El *resultado* se despliega en la consola.
+___
+
+## 8. Volumen de un cilindro hueco
+
+Para realizar el calculo del volumen de un cilindro hueco usaremos el siguiente codigo:
+
+~~~
+(defun volumCilindroHueco ()
+    (princ "Dame la altura del cilindro: ")
+    (setq altura (read))
+    (princ "Dame el radio mayor del cilindro: ")
+    (setq rMayor (read))
+    (princ "Dame el radio menor del cilindro: ")
+    (setq rMenor (read))
+    (setq resultado (* 3.14 altura (- (* rMayor rMayor) (* rMenor rMenor))))
+)
+~~~
+
+### Formula para obtener el volumen de un cilindro hueco:
+
+![Formula para volumen de un cilindro hueco](https://www.areasyvolumenes.net/wp-content/uploads/2022/09/volumen-de-un-cilindro-hueco.png)
+
+`Fórmula del Volumen = π * h * (R² - r²)`
+
+### Funcionamineto del codigo:
+
+1. Se define una funcion con el nombre ***volumCilindroHueco***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la altura del cilindro.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *altura* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la logitud del radio mayor del cilindro.
+5. Con la funcion ***setq*** inicializamos una variable con el nombre *rMayor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+6. Desplegamos un nuevo mensaje con ***princ*** para que el usuario nos dé la logitud del radio menor del cilindro.
+7. Con la funcion ***setq*** inicializamos una variable con el nombre *rMenor* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+8. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* 3.14 altura (- (* rMayor rMayor) (* rMenor rMenor)))`:
+    - Primero buscaremos resolver la resta entre el cuadrado de los radios, por lo cual primero elevaremos al cuadrado el radio mayor y el radio menor.
+    - Una vez elevados al cuadrado los restaremos, quitandole al cuadrado del radio mayor el resultado del cuadrado del radio menor.
+    - Multiplicaremos Pi por la altura y el resultado de la resta de los cuadrados de los radios.
+    - Listo, ya obtuvimos el volumen de un cilindro hueco.
+9. El *resultado* se despliega en la consola.
+___

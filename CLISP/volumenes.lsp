@@ -56,3 +56,14 @@
     (setq altura (read))
     (setq resultado (* (/ 1 3) aBase altura))
 )
+
+; 8. Volumen de un cilindro hueco
+(defun volumCilindroHueco ()
+    (princ "Dame la altura del cilindro: ")
+    (setq altura (read))
+    (princ "Dame el radio mayor del cilindro: ")
+    (setq rMayor (read))
+    (princ "Dame el radio menor del cilindro: ")
+    (setq rMenor (read))
+    (setq resultado (* 3.14 altura (- (* rMayor rMayor) (* rMenor rMenor))))
+)
