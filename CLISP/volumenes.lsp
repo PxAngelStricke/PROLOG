@@ -67,3 +67,10 @@
     (setq rMenor (read))
     (setq resultado (* 3.14 altura (- (* rMayor rMayor) (* rMenor rMenor))))
 )
+
+; 9. Volumen de un octaedro
+(defun volumOctaedro ()
+    (princ "Dame la longitud de uno de sus lados: ")
+    (setq lados (read))
+    (setq resultado (* (/ 1 3) (sqrt 2) (* lados lados lados)))
+)

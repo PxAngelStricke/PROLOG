@@ -263,3 +263,35 @@ Para realizar el calculo del volumen de un cilindro hueco usaremos el siguiente 
     - Listo, ya obtuvimos el volumen de un cilindro hueco.
 9. El *resultado* se despliega en la consola.
 ___
+
+## 9. Volumen de un octaedro
+
+Para realizar el calculo del volumen de un octaedro usaremos el siguiente codigo:
+
+~~~
+(defun volumOctaedro ()
+    (princ "Dame la longitud de uno de sus lados: ")
+    (setq lados (read))
+    (setq resultado (* (/ 1 3) (sqrt 2) (* lados lados lados)))
+)
+~~~
+
+### Formula para obtener el volumen de un octaedro:
+
+![Formula para volumen de un octaedro](https://i.ytimg.com/vi/nN7Ojg5nppw/maxresdefault.jpg)
+
+`Fórmula del Volumen = (1⁄3) * √2 * a³`
+
+### Funcionamineto del codigo:
+
+1. Se define una funcion con el nombre ***volumOctaedro***.
+2. Se despliega un mensaje con ***princ*** para que el usuario nos dé la longitud de uno de sus lados.
+3. Con la funcion ***setq*** inicializamos una variable con el nombre *lados* y realizamos una lectura con ***read*** para guardar en la variable lo que el usuario a digitado.
+4. Con la funcion ***setq*** inicializamos una variable con el nombre *resultado* y realizamos la operacion `(* (/ 1 3) (sqrt 2) (* lados lados lados))`:
+    - Primero obtendremos el resultado de dividir 1 entre 3.
+    - Obtenemos el valor de la raiz cuadrada de 2.
+    - Obtenemos el valor de elevar al cubo la longitud de los lados.
+    - Multiplicamos los 3 resultados.
+    - Listo, ya obtuvimos el volumen de un octaedro.
+5. El *resultado* se despliega en la consola.
+___
