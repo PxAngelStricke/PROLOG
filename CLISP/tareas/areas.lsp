@@ -35,7 +35,7 @@
     (setq bMenor (read))
     (princ "Dale la longitud de la altura: ")
     (setq altura (read))
-    (setq resultado (/ (* (+ bMayor bMenor) altura) 2))
+    (setq resultado (* (/ (+ bMayor bMenor) 2) altura))
 )
 
 (defun areaCirculo() 
