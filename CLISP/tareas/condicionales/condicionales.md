@@ -1,13 +1,33 @@
-Resolver los siguientes problemas utilizando if, case, when, unless,
-cond checar pagina del libro
+# Realizaremos los ejercicios de condicionales
 
-1. Una tienda que vende pantalones Dickies al menudeo y al mayoreo tiene
-   las siguientes tarifas, si se compran menos de 5 pantalones estos se
-   cobran a su precio normal, en caso de que se copren 5 o mas pero
-   menos de 12 , se les descuenta el 15% en cada pantalon, si se compran
-   mas de 12 se les descuenta 30% en cada pantalon.  Escriba un programa
-   que pida como dato de entrada el numero de pantalones que se desean
-   comprar y con ello imprima el total a pagar por la compra hecha.
+## 1. Una tienda que vende pantalones Dickies al menudeo y al mayoreo tiene las siguientes tarifas, si se compran menos de 5 pantalones estos se cobran a su precio normal, en caso de que se copren 5 o mas pero menos de 12 , se les descuenta el 15% en cada pantalon, si se compran mas de 12 se les descuenta 30% en cada pantalon. Escriba un programa que pida como dato de entrada el numero de pantalones que se desean comprar y con ello imprima el total a pagar por la compra hecha.
+
+En este caso utilizaremos la condicional COND para el primer problema, nuestro codigo quedaria asi:
+
+~~~
+(defun calPrecio (numPantalones)
+    ; Variables
+    (defvar precioNormal 100)
+    (defvar descuento15 0.85)
+    (defvar descuento30 0.7)
+    
+    ; Condiciones
+    (cond 
+        ((< numPantalones 5) (* numPantalones precioNormal))
+        ((and (>= numPantalones 5) (< numPantalones 12)) (* numPantalones (- 1 descuento15)))
+        ((>= numPantalones 12) (* numPantalones (- 1 descuento30)))
+    )
+
+    ; Salida al usuario
+    (format t "¿Cuantos pantalones compraste?: ")
+    (setq numPantalones (read))
+    (setq precioFinal (calPrecio numPantalones))
+    (format t "Total a pagar:  ~A" precioFinal)
+)
+~~~
+
+Primero estamos declarando la funcion ***calPrecio***, seguido de eso estamos declarando nuestras variables y la condicional, para al final hacer el text output que verá el usuario en su terminal.
+___
 
 2. Escriba un programa para determinar si un solicitante puede lograr un
    préstamo. Deberá pedir los siguientes datos para cada solicitante:
