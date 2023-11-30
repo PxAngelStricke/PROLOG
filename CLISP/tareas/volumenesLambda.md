@@ -1,3 +1,10 @@
+# Areas de figuras
+
+## 1. Definicion de funciones lambda
+
+Para calcular el volumen utilizaremos las funciones lambda las cuales nos permiten ejecutar operaciones de manera mas sencilla para lo cual utilizaremos las siguientes operaciones:
+
+~~~
 ; Operaciones
 (defvar *mult3num* (lambda (num1 num2 num3) (* num1 num2 num3)))
 (defvar *mult2num* (lambda (num1 num2) (* num1 num2)))
@@ -6,7 +13,11 @@
 (defvar *division* (lambda (num1 num2) (/ num1 num2)))
 (defvar *resta2num* (lambda (num1 num2) (- num1 num2)))
 (defvar *suma2num* (lambda (num1 num2) (+ num1 num2)))
+~~~
 
+## 2. Volveremos a utilizar la logica de operaciones de la tarea anterior de volumenes.lsp (las formulas y explicacion se encuentran en volumenes.md) re-utilziando formulas
+
+~~~
 ; Datos
 ; 1. Volumen Prisma Rectangular
 (defun volumPrisRectan()
@@ -91,3 +102,4 @@
     (setq lados (read))
     (format t "El volumen del icosaedro es: ~A" (funcall *mult3num* (funcall *division* 5 12) (funcall *suma2num* 3 (sqrt 5)) (funcall *cubo* lados)))
 )
+~~~

@@ -1,0 +1,103 @@
+# Areas de figuras
+
+## 1. Definicion de funciones lambda
+
+Para calcular estas areas utilizaremos las funciones lambda las cuales nos permiten ejecutar operaciones de manera mas sencilla para lo cual utilizaremos las siguientes operaciones:
+
+~~~
+; Operaciones
+(defvar *cuadrado* (lambda (a) (* a a)))
+(defvar *cubo* (lambda (a) (* a a a)))
+(defvar *baseAltura* (lambda (a b) (* a b)))
+(defvar *baseAltura2* (lambda (a b) (/ (* a b) 2)))
+(defvar *sum2num* (lambda (num1 num2) (+ num1 num2)))
+(defvar *mult2num* (lambda (num1 num2) (* num1 num2)))
+(defvar *mult3num* (lambda (num1 num2 num3) (* num1 num2 num3)))
+(defvar *div2num* (lambda (num1 num2) (/ num1 num2)))
+(defvar *multPi* (lambda (num) (* 3.14 num)))
+~~~
+
+## 2. Volveremos a utilizar la logica de operaciones de la tarea anterior de areas.lsp (las formulas y explicacion se encuentran en areas.md) re-utilziando formulas
+
+~~~
+; Datos
+(defun areaCuadrado ()
+    (princ "Dame la longitud de uno de sus lados: ")
+    (setq a (read))
+    (format t "El area del cuadrado es: ~A" (funcall *cuadrado* a))
+)
+
+(defun areaTriangulo ()
+    (princ "Dame la longitud de la base: ")
+    (setq base (read))
+    (princ "Dame la longitud de la altura: ")
+    (setq altura (read))
+    (format t "El area del triangulo es: ~A" (funcall *baseAltura2* altura base))
+)
+
+(defun areaRectangulo()
+    (princ "Dame la longitud de la base: ")
+    (setq base (read))
+    (princ "Dame la longitud de la altura: ")
+    (setq altura (read))
+    (format t "El area del rectangulo es: ~A" (funcall *baseAltura* altura base))
+)
+
+(defun areaRombo()
+    (princ "Dame la longitud de la diagonal mayor: ")
+    (setq dMayor (read))
+    (princ "Dame la longitud de la diagonal menor: ")
+    (setq dMenor (read))
+    (format t "El area del rombo es: ~A" (funcall *baseAltura2* dMayor dMenor))
+)
+
+(defun areaTrapecio()
+    (princ "Dame la longitud de la base mayor: ")
+    (setq bMayor (read))
+    (princ "Dame la longitud de la base menor: ")
+    (setq bMenor (read))
+    (princ "Dale la longitud de la altura: ")
+    (setq altura (read))
+    (format t "El area del trapecio es: ~A" (funcall *mult2num* (funcall *div2num* (funcall *sum2num* bMayor bMenor) 2) altura))
+)
+
+(defun areaCirculo() 
+    (princ "Dame el radio del circulo: ")
+    (setq radio (read))
+    (format t "El area del circulo es: ~A" (funcall *multPi* (funcall *cuadrado* radio)))
+)
+
+(defun areaPoligonoReg()
+    (princ "Dame el numero de lados que tiene el poligono: ")
+    (setq lados (read))
+    (princ "Dame la longitud de la base de uno de los lados: ")
+    (setq base (read))
+    (princ "Dame la longitud del apotema: ")
+    (setq apotema (read))
+    (format t "El area del poligono regular es: ~A" (funcall *div2num* (funcall *mult3num* lados base apotema) 2))
+)
+
+(defun areaParalelogramo()
+    (princ "Dame la longitud de la base: ")
+    (setq base (read))
+    (princ "Dame la longitud de la altura: ")
+    (setq altura (read))
+    (format t "El area del paralelogramo es: ~A" (funcall *basealtura* base altura))
+)
+
+(defun areaOvalo()
+    (princ "Dame la longitud del primero radio: ")
+    (setq r1 (read))
+    (princ "Dame la longitud del segundo radio: ")
+    (setq r2 (read))
+    (format t "El area del ovalo es: ~A" (funcall *mult3num* r1 r2 3.14))
+)
+
+(defun areaCometa()
+    (princ "Dame la longitud de la diagonal mayor: ")
+    (setq diagMayor (read))
+    (princ "Dame la longitud de la diagonal menor: ")
+    (setq diagMenor (read))
+    (format t "El area del cometa es: ~A" (funcall *baseAltura2* diagMayor diagMenor))
+)
+~~~
