@@ -90,3 +90,25 @@ ___
    2. Los meses 4,6,9 y 11 tienen 30 dias
    3. Los meses 1,3,5,7,8,10 y 12 tienen 31 dias
 ## Si da un mes diferente a los anteriores debera imprimir el mensaje “MES ERRONEO”.
+
+Para este problema utilizaremos la condicional COND, nuestro codigo quedaria asi:
+
+~~~
+(defun mesN ()
+    ;Textout
+    (format t "Ingresa el mes (1 al 12): ")
+    (setq mes (read))
+
+    ;Condicional COND
+    (cond 
+        ((= mes 2) (format t "El mes 2 tiene 28 dias.~%"))
+        ((member mes '(4 6 9 11)) (format t "El mes ~a tiene 30 dias.~%"))
+        ((member mes '(1 3 5 7 8 10 12)) (format t "El mes ~a tiene 31 dias.~%"))
+        (t (format t "Mes erroneo~%"))
+    )
+)
+~~~
+
+Primero estamos creando la funcion *mesN* el cual primero nos regresa un texto donde ignresaremos el mes, lo guardaremos en una variable y despues ingresamos a la condicional COND que nos evaluara cuantos dias tiene el mes que hemos ingresado.
+
+___
