@@ -1,8 +1,26 @@
 ; ----------- IF -----------
+; Problema 4
+; Operacion
+(defvar *modulo* (lambda (num div) (= (mod num div) 0)))
 
+(defun bisiesto ()
+    ; Textout
+    (format t "Ingrese un año: ")
+    (setq año (read))
+
+    ; Condicional IF
+    (if 
+        (or
+            (and (funcall *modulo* año 4) (not (funcall *modulo* año 100)))
+            (funcall *modulo* año 400)
+        )
+        (format t "El año ~a es bisiesto.~%")
+        (format t "El año ~a no es bisiesto.~%")
+    )
+)
 
 ; ----------- CASE -----------
-; Precio 3
+; Problema 3
 (defun vocalSemi (letra)
     ; Textout para el usuario
     (format t "Ingresa una letra: ")

@@ -59,6 +59,32 @@ ___
 
 ## 4. Para determinar si un año es bisiesto o no debe de cumplir las siguiente regla: Ser divisible entre 4 y no divisible entre 100 o bien divisible entre 400.  Escriba un programa que pida como entrada el año e imprima si el año es bisiesto o no.
 
+En este caso usaremos el condicional IF y nuestro codigo quedaria de la siguiente manera:
+
+~~~
+(defvar *modulo* (lambda (num div) (= (mod num div) 0)))
+
+(defun bisiesto ()
+    ; Textout
+    (format t "Ingrese un año: ")
+    (setq año (read))
+
+    ; Condicional IF
+    (if 
+        (or
+            (and (funcall *modulo* año 4) (not (funcall *modulo* año 100)))
+            (funcall *modulo* año 400)
+        )
+        (format t "El año ~a es bisiesto.~%")
+        (format t "El año ~a no es bisiesto.~%")
+    )
+)
+~~~
+
+Primero estamos definiendo una operacion lambda para poder realizar un modulo y obtener si es divisible entre los valores pedidos para poder verificar si es bisiesto o no, despues hacemos un ***defun*** para poder pedir que el usuario nos de el año y nosotros poder usar la condicional IF para verificar si es o no bisiesto ayudandonos de la funcion lambda.
+
+___
+
 ## 5. Escriba un programa que pida el numero de mes (del 1 al 12 ) e imprima el numero de dias que tiene el mes, donde:
    1. El mes 2 tiene 28 dias
    2. Los meses 4,6,9 y 11 tienen 30 dias
