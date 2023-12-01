@@ -1,16 +1,29 @@
-; IF
+; ----------- IF -----------
 
 
-; CASE
+; ----------- CASE -----------
+; Precio 3
+(defun vocalSemi (letra)
+    ; Textout para el usuario
+    (format t "Ingresa una letra: ")
+    (setq letra (read))
+    (setq resultado (vocalSemi letra))
+    
+    ; Condicion
+    (case letra
+        ((#\a #\e #\i #\o #\u) (format t "La letra ~c es una vocal.~%"))
+        (#\y (format t "La letra ~c es una semivocal.~%"))
+        (t (format t "La letra ~c es una consonante.~%"))
+    )
+)
+
+; ----------- WHEN -----------
 
 
-; WHEN
+; ----------- UNLESS -----------
 
 
-; UNLESS
-
-
-; COND
+; ----------- COND -----------
 ; Problema 1
 (defun calPrecio (numPantalones)
     ; Variables
@@ -31,4 +44,5 @@
     (setq precioFinal (calPrecio numPantalones))
     (format t "Total a pagar:  ~A" precioFinal)
 )
+
 
