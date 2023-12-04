@@ -546,14 +546,77 @@ sistema:- writeln('Hola, soy tu sistema experto, puedes preguntarme sobre el Par
 	template([s(_), es, un, zombi, '?'], [flagZombis], [0]).
 	template([zombi, s(_), es, un, zombi, '.'], [flagZombis], [1]).
 	template([zombi, s(_), es, un, zombi, '?'], [flagZombis], [1]).
-	template([el, zombi, s(_), es, un, zombi, '.'], [flagZombis], [1]).
-	template([el, zombi, s(_), es, un, zombi, '?'], [flagZombis], [1]).
+	template([el, zombi, s(_), es, un, zombi, '.'], [flagZombis], [2]).
+	template([el, zombi, s(_), es, un, zombi, '?'], [flagZombis], [2]).
 	template([s(_), es, un, zombi, del, juego, '.'], [flagZombis], [0]).
 	template([s(_), es, un, zombi, del, juego, '?'], [flagZombis], [0]).
 	template([zombi, s(_), es, un, zombi, del, juego, '.'], [flagZombis], [1]).
 	template([zombi, s(_), es, un, zombi, del, juego, '?'], [flagZombis], [1]).
-	template([el, zombi, s(_), es, un, zombi, del, juego, '.'], [flagZombis], [1]).
-	template([el, zombi, s(_), es, un, zombi, del, juego, '?'], [flagZombis], [1]).
+	template([el, zombi, s(_), es, un, zombi, del, juego, '.'], [flagZombis], [2]).
+	template([el, zombi, s(_), es, un, zombi, del, juego, '?'], [flagZombis], [2]).
+
+	% Banda sonora de plantas vs zombis
+	template([musica, del, juego, '.'], ['La banda sonora de Plantas contra Zombis fue compuesta por Laura Shigihara. Toma prestados elementos de musica pop, asi como chiptunes de consola.'], []).
+	template([banda, sonora, del, juego, '.'], ['La banda sonora de Plantas contra Zombis fue compuesta por Laura Shigihara. Toma prestados elementos de musica pop, asi como chiptunes de consola.'], []).
+	template([cual, es, la, musica, del, juego, '.'], ['Plantas vs zombis cuenta con una variedad de canciones de las cuales podemos mencionar: 
+	- Main Menu: La cancion del menu principal.
+	- Chose Your Seeds: Cancion que suena cuando estas eligiendo las plantas para atacar.
+	- Grasswalk: Cancion que suena en el modo Dia.
+	- Moongrains: Cancion que suena en el modo Noche.
+	- Watery Graves: Cancion que suena en el modo Piscina.
+	- Rigor Mormist: Cancion que suena en el modo Niebla.
+	- Graze The Roof: Cancion que suena en el modo Tejado.
+	- Braniac Maniac: cancion que se usa en la Batalla del Dr. Zomboss.
+	- Loonboon: Cancion que suena en los niveles 1-5, 2-5, 3-5 y 5-5.
+	- Cerebrawl: Cancion que suena en los Puzzles y en el Nivel 4-5.
+	- Zombies On Your Lawn: La cancion final de los Creditos.
+	- Uraniwa Ni Zombies Ga: Version japonesa de los Creditos.'], []).
+	
+	template([cual, es, la, musica, del, juego, '?'], ['Plantas vs zombis cuenta con una variedad de canciones de las cuales podemos mencionar: 
+	- Main Menu: La cancion del menu principal.
+	- Chose Your Seeds: Cancion que suena cuando estas eligiendo las plantas para atacar.
+	- Grasswalk: Cancion que suena en el modo Dia.
+	- Moongrains: Cancion que suena en el modo Noche.
+	- Watery Graves: Cancion que suena en el modo Piscina.
+	- Rigor Mormist: Cancion que suena en el modo Niebla.
+	- Graze The Roof: Cancion que suena en el modo Tejado.
+	- Braniac Maniac: cancion que se usa en la Batalla del Dr. Zomboss.
+	- Loonboon: Cancion que suena en los niveles 1-5, 2-5, 3-5 y 5-5.
+	- Cerebrawl: Cancion que suena en los Puzzles y en el Nivel 4-5.
+	- Zombies On Your Lawn: La cancion final de los Creditos.
+	- Uraniwa Ni Zombies Ga: Version japonesa de los Creditos.'], []).
+	
+	template([que, canciones, tiene, el, juego, '.'], ['Plantas vs zombis cuenta con una variedad de canciones de las cuales podemos mencionar: 
+	- Main Menu: La cancion del menu principal.
+	- Chose Your Seeds: Cancion que suena cuando estas eligiendo las plantas para atacar.
+	- Grasswalk: Cancion que suena en el modo Dia.
+	- Moongrains: Cancion que suena en el modo Noche.
+	- Watery Graves: Cancion que suena en el modo Piscina.
+	- Rigor Mormist: Cancion que suena en el modo Niebla.
+	- Graze The Roof: Cancion que suena en el modo Tejado.
+	- Braniac Maniac: cancion que se usa en la Batalla del Dr. Zomboss.
+	- Loonboon: Cancion que suena en los niveles 1-5, 2-5, 3-5 y 5-5.
+	- Cerebrawl: Cancion que suena en los Puzzles y en el Nivel 4-5.
+	- Zombies On Your Lawn: La cancion final de los Creditos.
+	- Uraniwa Ni Zombies Ga: Version japonesa de los Creditos.'], []).
+	
+	template([que, canciones, tiene, el, juego, '?'], ['Plantas vs zombis cuenta con una variedad de canciones de las cuales podemos mencionar: 
+	- Main Menu: La cancion del menu principal.
+	- Chose Your Seeds: Cancion que suena cuando estas eligiendo las plantas para atacar.
+	- Grasswalk: Cancion que suena en el modo Dia.
+	- Moongrains: Cancion que suena en el modo Noche.
+	- Watery Graves: Cancion que suena en el modo Piscina.
+	- Rigor Mormist: Cancion que suena en el modo Niebla.
+	- Graze The Roof: Cancion que suena en el modo Tejado.
+	- Braniac Maniac: cancion que se usa en la Batalla del Dr. Zomboss.
+	- Loonboon: Cancion que suena en los niveles 1-5, 2-5, 3-5 y 5-5.
+	- Cerebrawl: Cancion que suena en los Puzzles y en el Nivel 4-5.
+	- Zombies On Your Lawn: La cancion final de los Creditos.
+	- Uraniwa Ni Zombies Ga: Version japonesa de los Creditos.'], []).
+
+	% Versiones del juego
+	template([que, versiones, existen, del, juego, '.'], ['Salieron diversas versiones del juego ya que se hizo rapidamente muy popular, podemos mencionar algunas versiones como las de: xbox 360, xbox one, nintendo DS, playstation 3, playstation vita, iOs, Bada, Android, Nokia, Java y para PC'], []).
+	template([que, versiones, existen, del, juego, '?'], ['Salieron diversas versiones del juego ya que se hizo rapidamente muy popular, podemos mencionar algunas versiones como las de: xbox 360, xbox one, nintendo DS, playstation 3, playstation vita, iOs, Bada, Android, Nokia, Java y para PC'], []).
 
 
 
