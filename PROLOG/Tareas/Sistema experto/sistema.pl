@@ -205,7 +205,355 @@ sistema:- writeln('Hola, soy tu sistema experto, puedes preguntarme sobre el Par
 
 
 	% * ---------------------------------------- TEMA DE MI GUSTO ----------------------------------------
+	% Informacion basico
+	template([plantas, vs, zombis, '.'], ['Plants vs. Zombies es una franquicia de videojuegos desarrollada por PopCap Games, una subsidiaria de Electronic Arts. El primer juego, Plants vs. Zombies, fue desarrollado y lanzado por PopCap antes de su adquisición por EA.'], []).
+	template([plantas, contra, zombis, '.'], ['Plants vs. Zombies es una franquicia de videojuegos desarrollada por PopCap Games, una subsidiaria de Electronic Arts. El primer juego, Plants vs. Zombies, fue desarrollado y lanzado por PopCap antes de su adquisición por EA.'], []).
+	template([hablame, sobre, plantas, vs, zombis, '.'], ['Plants vs. Zombies es una franquicia de videojuegos desarrollada por PopCap Games, una subsidiaria de Electronic Arts. El primer juego, Plants vs. Zombies, fue desarrollado y lanzado por PopCap antes de su adquisición por EA.'], []).
+	template([hablame, sobre, plantas, contra, zombis, '.'], ['Plants vs. Zombies es una franquicia de videojuegos desarrollada por PopCap Games, una subsidiaria de Electronic Arts. El primer juego, Plants vs. Zombies, fue desarrollado y lanzado por PopCap antes de su adquisición por EA.'], []).
+	template([que, sabes, sobre, plantas, vs, zombis, '.'], ['Plants vs. Zombies es una franquicia de videojuegos desarrollada por PopCap Games, una subsidiaria de Electronic Arts. El primer juego, Plants vs. Zombies, fue desarrollado y lanzado por PopCap antes de su adquisición por EA.'], []).
+	template([que, sabes, sobre, plantas, vs, zombis, '?'], ['Plants vs. Zombies es una franquicia de videojuegos desarrollada por PopCap Games, una subsidiaria de Electronic Arts. El primer juego, Plants vs. Zombies, fue desarrollado y lanzado por PopCap antes de su adquisición por EA.'], []).
 
+	% Modo y estilo de juego
+	template([cual, es, el, estilo, de, juego, de, plantas, vs, zombis, '.'], ['El estilo de juego es similar a otros juegos de tower defense. El jugador va disponiendo en el escenario distintos tipos de plantas con distintas características con algunas mejoras(se compran en la tienda) únicas de ataque o defensa en tres localizaciones diferentes: jardín delantero, jardín trasero y tejado de la casa, con la intención de detener a una horda de zombis en su misión de devorar los cerebros de los residentes. Los zombis también se presentan en una serie de tipos con diferentes atributos y habilidades, como cavar por debajo de las plantas o saltar por encima de éstas con la ayuda de pértigas, llevar diferentes objetos como casco o conos, o invocar a cuatro zombis para representar una curiosa coreografía inspirada en Thriller.'], []).
+	template([cual, es, el, estilo, de, juego, de, plantas, vs, zombis, '?'], ['El estilo de juego es similar a otros juegos de tower defense. El jugador va disponiendo en el escenario distintos tipos de plantas con distintas características con algunas mejoras(se compran en la tienda) únicas de ataque o defensa en tres localizaciones diferentes: jardín delantero, jardín trasero y tejado de la casa, con la intención de detener a una horda de zombis en su misión de devorar los cerebros de los residentes. Los zombis también se presentan en una serie de tipos con diferentes atributos y habilidades, como cavar por debajo de las plantas o saltar por encima de éstas con la ayuda de pértigas, llevar diferentes objetos como casco o conos, o invocar a cuatro zombis para representar una curiosa coreografía inspirada en Thriller.'], []).
+	template([cual, es, el, estilo, de, juego, de, plantas, contra, zombis, '.'], ['El estilo de juego es similar a otros juegos de tower defense. El jugador va disponiendo en el escenario distintos tipos de plantas con distintas características con algunas mejoras(se compran en la tienda) únicas de ataque o defensa en tres localizaciones diferentes: jardín delantero, jardín trasero y tejado de la casa, con la intención de detener a una horda de zombis en su misión de devorar los cerebros de los residentes. Los zombis también se presentan en una serie de tipos con diferentes atributos y habilidades, como cavar por debajo de las plantas o saltar por encima de éstas con la ayuda de pértigas, llevar diferentes objetos como casco o conos, o invocar a cuatro zombis para representar una curiosa coreografía inspirada en Thriller.'], []).
+	template([cual, es, el, estilo, de, juego, de, plantas, contra, zombis, '?'], ['El estilo de juego es similar a otros juegos de tower defense. El jugador va disponiendo en el escenario distintos tipos de plantas con distintas características con algunas mejoras(se compran en la tienda) únicas de ataque o defensa en tres localizaciones diferentes: jardín delantero, jardín trasero y tejado de la casa, con la intención de detener a una horda de zombis en su misión de devorar los cerebros de los residentes. Los zombis también se presentan en una serie de tipos con diferentes atributos y habilidades, como cavar por debajo de las plantas o saltar por encima de éstas con la ayuda de pértigas, llevar diferentes objetos como casco o conos, o invocar a cuatro zombis para representar una curiosa coreografía inspirada en Thriller.'], []).
+	template([cuales, son, los, modos, de, juego, de, plantas, vs, zombis, '.'], ['El modo principal del juego es el modo historia, pero hay mas modos tales como minijuegos, puzzles y supervivencias'], []).
+	template([cuales, son, los, modos, de, juego, de, plantas, vs, zombis, '?'], ['El modo principal del juego es el modo historia, pero hay mas modos tales como minijuegos, puzzles y supervivencias'], []).
+	template([cuales, son, los, modos, de, juego, de, plantas, contra, zombis, '.'], ['El modo principal del juego es el modo historia, pero hay mas modos tales como minijuegos, puzzles y supervivencias'], []).
+	template([cuales, son, los, modos, de, juego, de, plantas, contra, zombis, '?'], ['El modo principal del juego es el modo historia, pero hay mas modos tales como minijuegos, puzzles y supervivencias'], []).
+	
+	% Minijuegos Plantas vs Zombis 1
+	template([minijuegos, '.'], ListaMinijuegos, []):-
+		findall(Minijuegos, minijuegosPlantasVsZombis(Minijuegos), ListaMinijuegos).
+	
+	template([minijuegos, de, plantas, vs, zombis, '.'], ListaMinijuegos, []):-
+		findall(Minijuegos, minijuegosPlantasVsZombis(Minijuegos), ListaMinijuegos).
+
+	template([minijuegos, de, plantas, contra, zombis, '.'], ListaMinijuegos, []):-
+		findall(Minijuegos, minijuegosPlantasVsZombis(Minijuegos), ListaMinijuegos).
+	
+	template([dime, los, minijuegos, '.'], ListaMinijuegos, []):-
+		findall(Minijuegos, minijuegosPlantasVsZombis(Minijuegos), ListaMinijuegos).
+	
+	template([dime, los, minijuegos, de, plantas, vs, zombis, '.'], ListaMinijuegos, []):-
+		findall(Minijuegos, minijuegosPlantasVsZombis(Minijuegos), ListaMinijuegos).
+
+	template([dime, los, minijuegos, de, plantas, contra, zombis, '.'], ListaMinijuegos, []):-
+		findall(Minijuegos, minijuegosPlantasVsZombis(Minijuegos), ListaMinijuegos).
+
+	% Minijuegos Plantas vs Zombis interactivos 2
+	template([s(_), es, un, minijuego, de, plantas, vs, zombis, '.'], [flagMinijuegos], [0]).
+	template([s(_), es, un, minijuego, de, plantas, vs, zombis, '?'], [flagMinijuegos], [0]).
+	template([s(_), es, un, minijuego, de, plantas, contra, zombis, '.'], [flagMinijuegos], [0]).
+	template([s(_), es, un, minijuego, de, plantas, contra, zombis, '?'], [flagMinijuegos], [0]).
+
+	% Puzzles Plantas vs Zombis 1
+	template([puzzles, '.'], ListaPuzzles, []):-
+		findall(Puzzles, puzzlesPlantasVsZombis(Puzzles), ListaPuzzles).
+	
+	template([puzzles, de, plantas, vs, zombis, '.'], ListaPuzzles, []):-
+		findall(Puzzles, puzzlesPlantasVsZombis(Puzzles), ListaPuzzles).
+
+	template([puzzles, de, plantas, contra, zombis, '.'], ListaPuzzles, []):-
+		findall(Puzzles, puzzlesPlantasVsZombis(Puzzles), ListaPuzzles).
+	
+	template([dime, los, puzzles, '.'], ListaPuzzles, []):-
+		findall(Puzzles, puzzlesPlantasVsZombis(Puzzles), ListaPuzzles).
+	
+	template([dime, los, puzzles, de, plantas, vs, zombis, '.'], ListaPuzzles, []):-
+		findall(Puzzles, puzzlesPlantasVsZombis(Puzzles), ListaPuzzles).
+
+	template([dime, los, puzzles, de, plantas, contra, zombis, '.'], ListaPuzzles, []):-
+		findall(Puzzles, puzzlesPlantasVsZombis(Puzzles), ListaPuzzles).
+
+	% Puzzles Plantas vs Zombis interactivos 2
+	template([s(_), es, un, puzzle, de, plantas, vs, zombis, '.'], [flagPuzzles], [0]).
+	template([s(_), es, un, puzzle, de, plantas, vs, zombis, '?'], [flagPuzzles], [0]).
+	template([s(_), es, un, puzzle, de, plantas, contra, zombis, '.'], [flagPuzzles], [0]).
+	template([s(_), es, un, puzzle, de, plantas, contra, zombis, '?'], [flagPuzzles], [0]).
+
+	% Supervivencia Plantas vs Zombis 1
+	template([supervivencia, '.'], ListaSupervivencia, []):-
+		findall(Supervivencia, supervivenciasPlantasVsZombis(Supervivencia), ListaSupervivencia).
+	
+	template([supervivencias, de, plantas, vs, zombis, '.'], ListaSupervivencia, []):-
+		findall(Supervivencia, supervivenciasPlantasVsZombis(Supervivencia), ListaSupervivencia).
+
+	template([supervivencias, de, plantas, contra, zombis, '.'], ListaSupervivencia, []):-
+		findall(Supervivencia, supervivenciasPlantasVsZombis(Supervivencia), ListaSupervivencia).
+	
+	template([dime, los, supervivencias, '.'], ListaSupervivencia, []):-
+		findall(Supervivencia, supervivenciasPlantasVsZombis(Supervivencia), ListaSupervivencia).
+	
+	template([dime, los, supervivencias, de, plantas, vs, zombis, '.'], ListaSupervivencia, []):-
+		findall(Supervivencia, supervivenciasPlantasVsZombis(Supervivencia), ListaSupervivencia).
+
+	template([dime, los, supervivencias, de, plantas, contra, zombis, '.'], ListaSupervivencia, []):-
+		findall(Supervivencia, supervivenciasPlantasVsZombis(Supervivencia), ListaSupervivencia).
+
+	% Supervivencia Plantas vs Zombis interactivos 2
+	template([supervivencia, s(_), es, un, minijuego, de, supervivencia, de, plantas, vs, zombis, '.'], [flagSupervivencias], [1]).
+	template([supervivencia, s(_), es, un, minijuego, de, supervivencia, de, plantas, vs, zombis, '?'], [flagSupervivencias], [1]).
+	template([supervivencia, s(_), es, un, minijuego, de, supervivencia, de, plantas, contra, zombis, '.'], [flagSupervivencias], [1]).
+	template([supervivencia, s(_), es, un, minijuego, de, supervivencia, de, plantas, contra, zombis, '?'], [flagSupervivencias], [1]).
+
+	% Niveles de Plantas vs Zombis 1
+	template([cuales, son, los, niveles, de, plantas, vs, zombis, '.'], ['Plantas vs zombis tiene 5 niveles de los cuales cada nivel tiene 10 sub-niveles dando un total de 50 niveles'], []).
+	template([cuales, son, los, niveles, de, plantas, contra, zombis, '.'], ['Plantas vs zombis tiene 5 niveles de los cuales cada nivel tiene 10 sub-niveles dando un total de 50 niveles'], []).
+	template([cuales, son, los, niveles, de, plantas, vs, zombis, '?'], ['Plantas vs zombis tiene 5 niveles de los cuales cada nivel tiene 10 sub-niveles dando un total de 50 niveles'], []).
+	template([cuales, son, los, niveles, de, plantas, contra, zombis, '?'], ['Plantas vs zombis tiene 5 niveles de los cuales cada nivel tiene 10 sub-niveles dando un total de 50 niveles'], []).
+	
+	% Niveles de Plantas vs Zombis interactivos 2
+	template([s(_), es, un, nivel, de, plantas, vs, zombis, '.'], [flagNiveles], [0]).
+	template([s(_), es, un, nivel, de, plantas, vs, zombis, '?'], [flagNiveles], [0]).
+	template([s(_), es, un, nivel, de, plantas, contra, zombis, '.'], [flagNiveles], [0]).
+	template([s(_), es, un, nivel, de, plantas, contra, zombis, '?'], [flagNiveles], [0]).
+
+	% Personajes de Plantas vs Zombis 1
+	template([personajes, '.'], ['Plantas vs Zombis cuenta con varios personajes, si quieres saber mas acerca de cada uno solo escribe su nombre'], []).
+	template([cuales, son, los, personajes, de, plantas, vs, zombis, '.'], ['Plantas vs Zombis cuenta con varios personajes, si quieres saber mas acerca de cada uno solo escribe su nombre'], []).
+	template([cuales, son, los, personajes, de, plantas, vs, zombis, '?'], ['Plantas vs Zombis cuenta con varios personajes, si quieres saber mas acerca de cada uno solo escribe su nombre'], []).
+	template([cuales, son, los, personajes, de, plantas, contra, zombis, '.'], ['Plantascontra Zombis cuenta con varios personajes, si quieres saber mas acerca de cada uno solo escribe su nombre'], []).
+	template([cuales, son, los, personajes, de, plantas, contra, zombis, '?'], ['Plantas vs Zombis cuenta con varios personajes, si quieres saber mas acerca de cada uno solo escribe su nombre'], []).
+	template([vecino, '.'], ['Es el unico personaje operable del juego. Esta diseñado de manera que el jugador tome su rol y sirve como una experiencia interactiva con el juego.'], []).
+	template([plantas, '.'], ['Son plantas con diferentes habilidades y defensas en contra de los zombis.'], []).
+	template([crazy, dave, '.'], ['Es el excentrico vecino del protagonista, un hombre que admite y clama estar demente. Aunque no se explica como sobrevive a la invasion de los zombis, normalmente actua como un aliado del jugador, a quien llama "vecino", y explica las características de ciertas plantas y la jugabilidad de ciertos niveles.'], []).
+	template([dave, '.'], ['Es el excentrico vecino del protagonista, un hombre que admite y clama estar demente. Aunque no se explica como sobrevive a la invasion de los zombis, normalmente actua como un aliado del jugador, a quien llama "vecino", y explica las características de ciertas plantas y la jugabilidad de ciertos niveles.'], []).
+	template([zomboss, '.'], ['El antagonista del juego. Es un zombi que recuerda al arquetipo de cientifico loco. Su objetivo es devorar el cerebro del protagonista, para lo que envia diferentes zombis a atacar el vecindario. Actua como el jefe final del juego en una confrontacion en la que opera un robot gigante llamado Zombot.'], []).
+	template([zombies, '.'], ['Muertos vivientes y lacayos del Dr. Zomboss, quienes buscan comer el cerebro del vecino. Al igual que las plantas, tienen diferentes habilidades y usan objetos que incrementan el nivel de dificultad.'], []).
+	template([cuales, son, los, personajes, de, plantas, vs, zombis, '.'], ListaPersonajes, []):-
+		findall(Personajes, personajePlantasVsZombis(Personajes), ListaPersonajes).
+
+	template([cuales, son, los, personajes, de, plantas, contra, zombis, '.'], ListaPersonajes, []):-
+		findall(Personajes, personajePlantasVsZombis(Personajes), ListaPersonajes).
+
+	template([cuales, son, los, personajes, de, plantas, vs, zombis, '?'], ListaPersonajes, []):-
+		findall(Personajes, personajePlantasVsZombis(Personajes), ListaPersonajes).
+
+	template([cuales, son, los, personajes, de, plantas, contra, zombis, '?'], ListaPersonajes, []):-
+		findall(Personajes, personajePlantasVsZombis(Personajes), ListaPersonajes).
+
+	template([dime, los, personajes, de, plantas, vs, zombis, '.'], ListaPersonajes, []):-
+		findall(Personajes, personajePlantasVsZombis(Personajes), ListaPersonajes).
+
+	template([dime, los, personajes, de, plantas, contra, zombis, '.'], ListaPersonajes, []):-
+		findall(Personajes, personajePlantasVsZombis(Personajes), ListaPersonajes).
+
+	template([dime, los, personajes, de, plantas, vs, zombis, '?'], ListaPersonajes, []):-
+		findall(Personajes, personajePlantasVsZombis(Personajes), ListaPersonajes).
+		
+	template([dime, los, personajes, de, plantas, contra, zombis, '?'], ListaPersonajes, []):-
+		findall(Personajes, personajePlantasVsZombis(Personajes), ListaPersonajes).
+
+	% Personajes de Plantas vs Zombis interactivos 2
+	template([s(_), es, un, personaje, de, plantas, vs, zombis, '.'], [flagPersonajes], [0]).
+	template([el, s(_), es, un, personaje, de, plantas, vs, zombis, '.'], [flagPersonajes], [1]).
+	template([las, s(_), son, un, personaje, de, plantas, vs, zombis, '.'], [flagPersonajes], [1]).
+	template([los, s(_), son, un, personaje, de, plantas, vs, zombis, '.'], [flagPersonajes], [1]).
+	template([s(_), es, un, personaje, de, plantas, vs, zombis, '?'], [flagPersonajes], [0]).
+	template([el, s(_), es, un, personaje, de, plantas, vs, zombis, '?'], [flagPersonajes], [1]).
+	template([las, s(_), son, un, personaje, de, plantas, vs, zombis, '?'], [flagPersonajes], [1]).
+	template([los, s(_), son, un, personaje, de, plantas, vs, zombis, '?'], [flagPersonajes], [1]).
+	template([s(_), es, un, personaje, de, plantas, contra, zombis, '?'], [flagPersonajes], [0]).
+	template([el, s(_), es, un, personaje, de, plantas, contra, zombis, '?'], [flagPersonajes], [1]).
+	template([las, s(_), son, un, personaje, de, plantas, contra, zombis, '?'], [flagPersonajes], [1]).
+	template([los, s(_), son, un, personaje, de, plantas, contra, zombis, '?'], [flagPersonajes], [1]).
+
+	% Tipos de plantas 1
+	template([que, tipos, de, plantas, hay, en, el, juego, '.'], ['En Plantas vs Zombis hay diferentes tipos de plantas, los cuales son: terrestres, protectoras, acuaticas, nocturas y mejoradas'], []).
+	template([que, tipos, de, plantas, hay, en, el, juego, '?'], ['En Plantas vs Zombis hay diferentes tipos de plantas, los cuales son: terrestres, protectoras, acuaticas, nocturas y mejoradas'], []).
+	template([tipos, de, plantas, '.'], ['En Plantas vs Zombis hay diferentes tipos de plantas, los cuales son: terrestres, protectoras, acuaticas, nocturas y mejoradas'], []).
+	template([dime, los, tipos, de, plantas, que, hay, en, el, juego, '.'], ListaTipoDePlantas, []):-
+		findall(TipoDePlantas, tipoPlanta(TipoDePlantas), ListaTipoDePlantas).
+
+	template([dime, los, tipos, de, plantas, que, hay, en, plantas, vs, zombis, '.'], ListaTipoDePlantas, []):-
+		findall(TipoDePlantas, tipoPlanta(TipoDePlantas), ListaTipoDePlantas).
+
+	template([cuales, son, los, tipos, de, plantas, que, hay, en, el, juego, '.'], ListaTipoDePlantas, []):-
+		findall(TipoDePlantas, tipoPlanta(TipoDePlantas), ListaTipoDePlantas).
+
+	template([cuales, son, los, tipos, de, plantas, que, hay, en, el, juego, '?'], ListaTipoDePlantas, []):-
+		findall(TipoDePlantas, tipoPlanta(TipoDePlantas), ListaTipoDePlantas).
+
+	template([cuales, son, los, tipos, de, plantas, que, hay, en, plantas, vs, zombis, '.'], ListaTipoDePlantas, []):-
+		findall(TipoDePlantas, tipoPlanta(TipoDePlantas), ListaTipoDePlantas).
+
+	template([cuales, son, los, tipos, de, plantas, que, hay, en, plantas, vs, zombis, '?'], ListaTipoDePlantas, []):-
+		findall(TipoDePlantas, tipoPlanta(TipoDePlantas), ListaTipoDePlantas).
+
+	% Tipos de plantas interactivo 2
+	template([s(_), es, un, tipo, de, planta, '.'], [flagTiposPlantas], [0]).
+	template([s(_), es, un, tipo, de, planta, '?'], [flagTiposPlantas], [0]).
+	template([las, plantas, s(_), son, un, tipo, de, planta, '.'], [flagTiposPlantas], [2]).
+	template([las, plantas, s(_), son, un, tipo, de, planta, '?'], [flagTiposPlantas], [2]).
+	template([s(_), es, un, tipo, de, planta, en, el, juego, '.'], [flagTiposPlantas], [0]).
+	template([s(_), es, un, tipo, de, planta, en, el, juego, '?'], [flagTiposPlantas], [0]).
+	template([las, plantas, s(_), son, un, tipo, de, planta, en, el, juego, '.'], [flagTiposPlantas], [2]).
+	template([las, plantas, s(_), son, un, tipo, de, planta, en, el, juego, '?'], [flagTiposPlantas], [2]).
+
+	% Plantas terrestres de Plantas vs Zombis 1
+	template([plantas, terrestres, '.'], ['Son plantas que funcionan en el suelo durante el dia y la noche. Asimismo, son plantas que solo atacan hacia el frente.'], []).
+	template([cuales, son, las, plantas, terrestres, '.'], ListaPlantasTerrestres, []):-
+		findall(PlantasTerrestres, plantaTerrestrePlantasVsZombis(PlantasTerrestres), ListaPlantasTerrestres).
+
+	template([dime, las, plantas, terrestres, '.'], ListaPlantasTerrestres, []):-
+		findall(PlantasTerrestres, plantaTerrestrePlantasVsZombis(PlantasTerrestres), ListaPlantasTerrestres).
+
+	template([cuales, son, las, plantas, terrestres, del, juego, '.'], ListaPlantasTerrestres, []):-
+		findall(PlantasTerrestres, plantaTerrestrePlantasVsZombis(PlantasTerrestres), ListaPlantasTerrestres).
+
+	template([dime, las, plantas, terrestres, del, juego, '.'], ListaPlantasTerrestres, []):-
+		findall(PlantasTerrestres, plantaTerrestrePlantasVsZombis(PlantasTerrestres), ListaPlantasTerrestres).
+
+	template([cuales, son, las, plantas, terrestres, que, hay, en, el, juego, '.'], ListaPlantasTerrestres, []):-
+		findall(PlantasTerrestres, plantaTerrestrePlantasVsZombis(PlantasTerrestres), ListaPlantasTerrestres).
+
+	template([dime, las, plantas, terrestres, que, hay, en, el, juego, '.'], ListaPlantasTerrestres, []):-
+		findall(PlantasTerrestres, plantaTerrestrePlantasVsZombis(PlantasTerrestres), ListaPlantasTerrestres).
+
+	% Plantas terrestres de Plantas vs Zombis interactivo 2
+	template([s(_), es, una, planta, terrestre, '.'], [flagPlantaTerrestre], [0]).
+	template([s(_), es, una, planta, terrestre, '?'], [flagPlantaTerrestre], [0]).
+	template([la, s(_), es, una, planta, terrestre, '.'], [flagPlantaTerrestre], [1]).
+	template([el, s(_), es, una, planta, terrestre, '?'], [flagPlantaTerrestre], [1]).
+
+	% Plantas protectoras de Plantas vs Zombis 1
+	template([plantas, protectoras, '.'], ['Se caracterizan por cumplir diversas funciones, ademas de atacar y defender a las plantas. Pueden ser explosivos, con efecto aereo, con proteccion o efecto disperso.'], []).
+	template([cuales, son, las, plantas, protectoras, '.'], ListaPlantasProtectoras, []):-
+		findall(PlantasProtectoras, plantaProtectoraPlantasVsZombis(PlantasProtectoras), ListaPlantasProtectoras).
+
+	template([dime, las, plantas, protectoras, '.'], ListaPlantasProtectoras, []):-
+		findall(PlantasProtectoras, plantaProtectoraPlantasVsZombis(PlantasProtectoras), ListaPlantasProtectoras).
+
+	template([cuales, son, las, plantas, protectoras, del, juego, '.'], ListaPlantasProtectoras, []):-
+		findall(PlantasProtectoras, plantaProtectoraPlantasVsZombis(PlantasProtectoras), ListaPlantasProtectoras).
+
+	template([dime, las, plantas, protectoras, del, juego, '.'], ListaPlantasProtectoras, []):-
+		findall(PlantasProtectoras, plantaProtectoraPlantasVsZombis(PlantasProtectoras), ListaPlantasProtectoras).
+
+	template([cuales, son, las, plantas, protectoras, que, hay, en, el, juego, '.'], ListaPlantasProtectoras, []):-
+		findall(PlantasProtectoras, plantaProtectoraPlantasVsZombis(PlantasProtectoras), ListaPlantasProtectoras).
+
+	template([dime, las, plantas, protectoras, que, hay, en, el, juego, '.'], ListaPlantasProtectoras, []):-
+		findall(PlantasProtectoras, plantaProtectoraPlantasVsZombis(PlantasProtectoras), ListaPlantasProtectoras).
+
+	% Plantas protectoras de Plantas vs Zombis interactivo 2
+	template([s(_), es, una, planta, protectora, '.'], [flagPlantaProtectora], [0]).
+	template([s(_), es, una, planta, protectora, '?'], [flagPlantaProtectora], [0]).
+	template([la, s(_), es, una, planta, protectora, '.'], [flagPlantaProtectora], [1]).
+	template([el, s(_), es, una, planta, protectora, '?'], [flagPlantaProtectora], [1]).
+
+	% Plantas nocturnas de Plantas vs Zombis 1
+	template([plantas, nocturnas, '.'], ['Se caracterizan por funcionar solo por las noches, ya que por el dia, duermen. De querer usar a estos por el dia, es necesario usar el Grano de cafe.'], []).
+	template([cuales, son, las, plantas, nocturnas, '.'], ListaPlantasNocturnas, []):-
+		findall(PlantasNocturnas, plantaNocturnaPlantasVsZombis(PlantasNocturnas), ListaPlantasNocturnas).
+
+	template([dime, las, plantas, nocturnas, '.'], ListaPlantasNocturnas, []):-
+		findall(PlantasNocturnas, plantaNocturnaPlantasVsZombis(PlantasNocturnas), ListaPlantasNocturnas).
+
+	template([cuales, son, las, plantas, nocturnas, del, juego, '.'], ListaPlantasNocturnas, []):-
+		findall(PlantasNocturnas, plantaNocturnaPlantasVsZombis(PlantasNocturnas), ListaPlantasNocturnas).
+
+	template([dime, las, plantas, nocturnas, del, juego, '.'], ListaPlantasNocturnas, []):-
+		findall(PlantasNocturnas, plantaNocturnaPlantasVsZombis(PlantasNocturnas), ListaPlantasNocturnas).
+
+	template([cuales, son, las, plantas, nocturnas, que, hay, en, el, juego, '.'], ListaPlantasNocturnas, []):-
+		findall(PlantasNocturnas, plantaNocturnaPlantasVsZombis(PlantasNocturnas), ListaPlantasNocturnas).
+
+	template([dime, las, plantas, nocturnas, que, hay, en, el, juego, '.'], ListaPlantasNocturnas, []):-
+		findall(PlantasNocturnas, plantaNocturnaPlantasVsZombis(PlantasNocturnas), ListaPlantasNocturnas).
+
+	% Plantas nocturnas de Plantas vs Zombis interactivo 2
+	template([s(_), es, una, planta, nocturna, '.'], [flagPlantaNoctura], [0]).
+	template([s(_), es, una, planta, nocturna, '?'], [flagPlantaNoctura], [0]).
+	template([la, s(_), es, una, planta, nocturna, '.'], [flagPlantaNoctura], [1]).
+	template([el, s(_), es, una, planta, nocturna, '?'], [flagPlantaNoctura], [1]).
+
+	% Plantas acuaticas de Plantas vs Zombis 1
+	template([plantas, acuaticas, '.'], ['Funcionan en el agua, ya sea por el dia como por la noche.'], []).
+	template([cuales, son, las, plantas, acuaticas, '.'], ListaPlantasAcuaticas, []):-
+		findall(PlantasAcuaticas, plantaNocturnaPlantasVsZombis(PlantasAcuaticas), ListaPlantasAcuaticas).
+
+	template([dime, las, plantas, acuaticas, '.'], ListaPlantasAcuaticas, []):-
+		findall(PlantasAcuaticas, plantaNocturnaPlantasVsZombis(PlantasAcuaticas), ListaPlantasAcuaticas).
+
+	template([cuales, son, las, plantas, acuaticas, del, juego, '.'], ListaPlantasAcuaticas, []):-
+		findall(PlantasAcuaticas, plantaNocturnaPlantasVsZombis(PlantasAcuaticas), ListaPlantasAcuaticas).
+
+	template([dime, las, plantas, acuaticas, del, juego, '.'], ListaPlantasAcuaticas, []):-
+		findall(PlantasAcuaticas, plantaNocturnaPlantasVsZombis(PlantasAcuaticas), ListaPlantasAcuaticas).
+
+	template([cuales, son, las, plantas, acuaticas, que, hay, en, el, juego, '.'], ListaPlantasAcuaticas, []):-
+		findall(PlantasAcuaticas, plantaNocturnaPlantasVsZombis(PlantasAcuaticas), ListaPlantasAcuaticas).
+
+	template([dime, las, plantas, acuaticas, que, hay, en, el, juego, '.'], ListaPlantasAcuaticas, []):-
+		findall(PlantasAcuaticas, plantaNocturnaPlantasVsZombis(PlantasAcuaticas), ListaPlantasAcuaticas).
+
+	% Plantas acuaticas de Plantas vs Zombis interactivo 2
+	template([s(_), es, una, planta, acuatica, '.'], [flagPlantaAcuatica], [0]).
+	template([s(_), es, una, planta, acuatica, '?'], [flagPlantaAcuatica], [0]).
+	template([la, s(_), es, una, planta, acuatica, '.'], [flagPlantaAcuatica], [1]).
+	template([el, s(_), es, una, planta, acuatica, '?'], [flagPlantaAcuatica], [1]).
+
+	% Plantas mejoradas de Plantas vs Zombis 1
+	template([plantas, mejoradas, '.'], ['Estas son plantas mejoradas en habilidades. Se pueden conseguir en la tienda de Crazy Dave.'], []).
+	template([cuales, son, las, plantas, mejoradas, '.'], ListaPlantasMejoradas, []):-
+		findall(PlantasMejoradas, plantaNocturnaPlantasVsZombis(PlantasMejoradas), ListaPlantasMejoradas).
+
+	template([dime, las, plantas, mejoradas, '.'], ListaPlantasMejoradas, []):-
+		findall(PlantasMejoradas, plantaNocturnaPlantasVsZombis(PlantasMejoradas), ListaPlantasMejoradas).
+
+	template([cuales, son, las, plantas, mejoradas, del, juego, '.'], ListaPlantasMejoradas, []):-
+		findall(PlantasMejoradas, plantaNocturnaPlantasVsZombis(PlantasMejoradas), ListaPlantasMejoradas).
+
+	template([dime, las, plantas, mejoradas, del, juego, '.'], ListaPlantasMejoradas, []):-
+		findall(PlantasMejoradas, plantaNocturnaPlantasVsZombis(PlantasMejoradas), ListaPlantasMejoradas).
+
+	template([cuales, son, las, plantas, mejoradas, que, hay, en, el, juego, '.'], ListaPlantasMejoradas, []):-
+		findall(PlantasMejoradas, plantaNocturnaPlantasVsZombis(PlantasMejoradas), ListaPlantasMejoradas).
+
+	template([dime, las, plantas, mejoradas, que, hay, en, el, juego, '.'], ListaPlantasMejoradas, []):-
+		findall(PlantasMejoradas, plantaNocturnaPlantasVsZombis(PlantasMejoradas), ListaPlantasMejoradas).
+
+	% Plantas mejoradas de Plantas vs Zombis interactivo 2
+	template([s(_), es, una, planta, mejorada, '.'], [flagPlantaMejorada], [0]).
+	template([s(_), es, una, planta, mejorada, '?'], [flagPlantaMejorada], [0]).
+	template([la, s(_), es, una, planta, mejorada, '.'], [flagPlantaMejorada], [1]).
+	template([el, s(_), es, una, planta, mejorada, '?'], [flagPlantaMejorada], [1]).
+
+	% Plantas zombis de Plantas vs Zombis 1
+	template([cuales, son, zombis, '.'], ListaZombis, []):-
+		findall(Zombis, zombiPlantasVsZombis(Zombis), ListaZombis).
+
+	template([dime, zombis, '.'], ListaZombis, []):-
+		findall(Zombis, zombiPlantasVsZombis(Zombis), ListaZombis).
+
+	template([cuales, son, zombis, del, juego, '.'], ListaZombis, []):-
+		findall(Zombis, zombiPlantasVsZombis(Zombis), ListaZombis).
+
+	template([dime, zombis, del, juego, '.'], ListaZombis, []):-
+		findall(Zombis, zombiPlantasVsZombis(Zombis), ListaZombis).
+
+	template([cuales, son, zombis, que, hay, en, el, juego, '.'], ListaZombis, []):-
+		findall(Zombis, zombiPlantasVsZombis(Zombis), ListaZombis).
+
+	template([dime, zombis, que, hay, en, el, juego, '.'], ListaZombis, []):-
+		findall(Zombis, zombiPlantasVsZombis(Zombis), ListaZombis).
+
+	% Plantas zombis de Plantas vs Zombis interactivo 2
+	template([s(_), es, un, zombi, '.'], [flagZombis], [0]).
+	template([s(_), es, un, zombi, '?'], [flagZombis], [0]).
+	template([zombi, s(_), es, un, zombi, '.'], [flagZombis], [1]).
+	template([zombi, s(_), es, un, zombi, '?'], [flagZombis], [1]).
+	template([el, zombi, s(_), es, un, zombi, '.'], [flagZombis], [1]).
+	template([el, zombi, s(_), es, un, zombi, '?'], [flagZombis], [1]).
+	template([s(_), es, un, zombi, del, juego, '.'], [flagZombis], [0]).
+	template([s(_), es, un, zombi, del, juego, '?'], [flagZombis], [0]).
+	template([zombi, s(_), es, un, zombi, del, juego, '.'], [flagZombis], [1]).
+	template([zombi, s(_), es, un, zombi, del, juego, '?'], [flagZombis], [1]).
+	template([el, zombi, s(_), es, un, zombi, del, juego, '.'], [flagZombis], [1]).
+	template([el, zombi, s(_), es, un, zombi, del, juego, '?'], [flagZombis], [1]).
 
 
 
@@ -294,6 +642,165 @@ sistema:- writeln('Hola, soy tu sistema experto, puedes preguntarme sobre el Par
 	especialistaParkinson('nutriologa').
 	especialistaParkinson('psicologa').
 
+	% FlagMinijuegos
+	minijuegoEs(X, R):- minijuegosPlantasVsZombis(X), R = ['Si', X, es, un, minijuego, de, 'Plantas vs Zombis'].
+	minijuegoEs(X, R):- \+minijuegosPlantasVsZombis(X), R = ['No', X, no, es, un, minijuego, de, 'Plantas vs Zombis'].
+	minijuegosPlantasVsZombis('vegezombis').
+	minijuegosPlantasVsZombis('bolera').
+	minijuegosPlantasVsZombis('zombiquarium').
+	minijuegosPlantasVsZombis('semillas-caidas').
+	minijuegosPlantasVsZombis('¡Formen!-¡Arr!').
+	minijuegosPlantasVsZombis('tragaperras').
+	minijuegosPlantasVsZombis('bezombied').
+	minijuegosPlantasVsZombis('portal-combat').
+	minijuegosPlantasVsZombis('invisibles').
+	minijuegosPlantasVsZombis('ultimo-batallón').
+	minijuegosPlantasVsZombis('mola-mazo').
+	minijuegosPlantasVsZombis('vegezombis-2').
+	minijuegosPlantasVsZombis('bezombied-twist').
+	minijuegosPlantasVsZombis('saltimbanquis').
+	minijuegosPlantasVsZombis('zombis-zumbaos').
+
+	% FlagPuzzlez
+	puzzleEs(X, R):- puzzlesPlantasVsZombis(X), R = ['Si', X, es, un, puzzle, de, 'Plantas vs Zombis'].
+	puzzleEs(X, R):- \+puzzlesPlantasVsZombis(X), R = ['No', X, no, es, un, puzzle, de, 'Plantas vs Zombis'].
+	puzzlesPlantasVsZombis('yo-zombi').
+	puzzlesPlantasVsZombis('ultimo-batallon').
+	puzzlesPlantasVsZombis('rompejarrones').
+
+	% FlagSupervivencia
+	supervicenciaEs(X, R):- supervivenciasPlantasVsZombis(X), R = ['Si', supervicencia, X, es, un, minijuego, de, supervivencia, de, 'Plantas vs Zombis'].
+	supervicenciaEs(X, R):- \+supervivenciasPlantasVsZombis(X), R = ['No', supervicencia, X, no, es, un, minijuego, de, supervivencia, de, 'Plantas vs Zombis'].
+	supervivenciasPlantasVsZombis('dia').
+	supervivenciasPlantasVsZombis('noche').
+	supervivenciasPlantasVsZombis('piscina').
+	supervivenciasPlantasVsZombis('niebla').
+	supervivenciasPlantasVsZombis('tejado').
+	supervivenciasPlantasVsZombis('infinita').
+
+	% FlagNiveles
+	nivelEs(X, R):- nivelesPlantasVsZombis(X), R = ['Si', X, es, un, nivel, de, 'Plantas vs Zombis'].
+	nivelEs(X, R):- \+nivelesPlantasVsZombis(X), R = ['No', X, no, es, un, nivel, de, 'Plantas vs Zombis'].
+	nivelesPlantasVsZombis('dia').
+	nivelesPlantasVsZombis('noche').
+	nivelesPlantasVsZombis('piscina').
+	nivelesPlantasVsZombis('niebla').
+	nivelesPlantasVsZombis('tejado').
+
+	% FlagPersonajes
+	personajeEs(X, R):- personajePlantasVsZombis(X), R = ['Si', X, es, un, personaje, de, 'Plantas vs Zombis'].
+	personajeEs(X, R):- \+personajePlantasVsZombis(X), R = ['No', X, no, es, un, personaje, de, 'Plantas vs Zombis'].
+	personajePlantasVsZombis('vecino').
+	personajePlantasVsZombis('plantas').
+	personajePlantasVsZombis('dave').
+	personajePlantasVsZombis('zomboss').
+	personajePlantasVsZombis('zombis').
+
+	% FlagTiposDePlantas
+	tipoPlantaEs(X, R):- tipoPlanta(X), R = ['Si', X, es, un, tipo, de, planta, en, el, juego, 'Plantas vs Zombis'].
+	tipoPlantaEs(X, R):- \+tipoPlanta(X), R = ['No', X, no, es, un, tipo, de, planta, en, el, juego, 'Plantas vs Zombis'].
+	tipoPlanta('terrestres').
+	tipoPlanta('protectoras').
+	tipoPlanta('nocturnas').
+	tipoPlanta('acuaticas').
+	tipoPlanta('mejoradas').
+
+	% FlagPlantasTerrestres
+	plantaTerrestreEs(X, R):- plantaTerrestrePlantasVsZombis(X), R = ['Si', X, es, una, planta, terrestre, de, 'Plantas vs Zombis'].
+	plantaTerrestreEs(X, R):- \+plantaTerrestrePlantasVsZombis(X), R = ['No', X, no, es, una, planta, terrestre, de, 'Plantas vs Zombis'].
+	plantaTerrestrePlantasVsZombis('girasol').
+	plantaTerrestrePlantasVsZombis('margarita').
+	plantaTerrestrePlantasVsZombis('lanzaguisante').
+	plantaTerrestrePlantasVsZombis('hielaguisante').
+	plantaTerrestrePlantasVsZombis('repetidora').
+	plantaTerrestrePlantasVsZombis('tripitidora').
+	plantaTerrestrePlantasVsZombis('carnivora').
+
+	% FlagPlantasProtectoras
+	plantaProtectoraEs(X, R):- plantaProtectoraPlantasVsZombis(X), R = ['Si', X, es, una, planta, protectora, de, 'Plantas vs Zombis'].
+	plantaProtectoraEs(X, R):- \+plantaProtectoraPlantasVsZombis(X), R = ['No', X, no, es, una, planta, protectora, de, 'Plantas vs Zombis'].
+	plantaProtectoraPlantasVsZombis('nuez').
+	plantaProtectoraPlantasVsZombis('calabaza').
+	plantaProtectoraPlantasVsZombis('plantorcha').
+	plantaProtectoraPlantasVsZombis('ajo').
+	plantaProtectoraPlantasVsZombis('apisonaflor').
+	plantaProtectoraPlantasVsZombis('bipetidora').
+	plantaProtectoraPlantasVsZombis('cactus').
+	plantaProtectoraPlantasVsZombis('petacereza').
+	plantaProtectoraPlantasVsZombis('jalapeño').
+	plantaProtectoraPlantasVsZombis('patatapum').
+	plantaProtectoraPlantasVsZombis('pinchohierba').
+	plantaProtectoraPlantasVsZombis('frustrella').
+	plantaProtectoraPlantasVsZombis('coltapulta').
+	plantaProtectoraPlantasVsZombis('lanzamaiz').
+	plantaProtectoraPlantasVsZombis('melonpulta').
+	plantaProtectoraPlantasVsZombis('trebolador').
+	plantaProtectoraPlantasVsZombis('paraplanta').
+	plantaProtectoraPlantasVsZombis('maceta').
+	plantaProtectoraPlantasVsZombis('cafe').
+
+	% FlagPlantasNocturnas
+	plantaNocturaEs(X, R):- plantaNocturnaPlantasVsZombis(X), R = ['Si', X, es, una, planta, nocturna, de, 'Plantas vs Zombis'].
+	plantaNocturaEs(X, R):- \+plantaNocturnaPlantasVsZombis(X), R = ['No', X, no, es, una, planta, nocturna, de, 'Plantas vs Zombis'].
+	plantaNocturnaPlantasVsZombis('seta').
+	plantaNocturnaPlantasVsZombis('humoseta').
+	plantaNocturnaPlantasVsZombis('marseta').
+	plantaNocturnaPlantasVsZombis('magnetoseta').
+	plantaNocturnaPlantasVsZombis('hipnoseta').
+	plantaNocturnaPlantasVsZombis('setacongelada').
+	plantaNocturnaPlantasVsZombis('setasolar').
+	plantaNocturnaPlantasVsZombis('petaseta').
+	plantaNocturnaPlantasVsZombis('comepiedras').
+	plantaNocturnaPlantasVsZombis('planterna').
+
+	% FlagPlantasAcuaticas
+	plantaAcuaticaEs(X, R):- plantaAcuaticaPlantasVsZombis(X), R = ['Si', X, es, una, planta, acuatica, de, 'Plantas vs Zombis'].
+	plantaAcuaticaEs(X, R):- \+plantaAcuaticaPlantasVsZombis(X), R = ['No', X, no, es, una, planta, acuatica, de, 'Plantas vs Zombis'].
+	plantaAcuaticaPlantasVsZombis('nenufar').
+	plantaAcuaticaPlantasVsZombis('zampalga').
+	plantaAcuaticaPlantasVsZombis('marseta').
+
+	% FlagPlantasMejoradas
+	plantaMejoradaEs(X, R):- plantaMejoradaPlantasVsZombis(X), R = ['Si', X, es, una, planta, mejorada, de, 'Plantas vs Zombis'].
+	plantaMejoradaEs(X, R):- \+plantaMejoradaPlantasVsZombis(X), R = ['No', X, no, es, una, planta, mejorada, de, 'Plantas vs Zombis'].
+	plantaMejoradaPlantasVsZombis('guisantralladora').
+	plantaMejoradaPlantasVsZombis('birasol').
+	plantaMejoradaPlantasVsZombis('gasoseta').
+	plantaMejoradaPlantasVsZombis('pinchorroca').
+	plantaMejoradaPlantasVsZombis('mazorcañon').
+	plantaMejoradaPlantasVsZombis('imitadora').
+
+	% FlagZombis
+	zombiEs(X, R):- zombiPlantasVsZombis(X), R = ['Si', X, es, un, zombi, de, 'Plantas vs Zombis'].
+	zombiEs(X, R):- \+zombiPlantasVsZombis(X), R = ['No', X, no, es, un, zombi, de, 'Plantas vs Zombis'].
+	zombiPlantasVsZombis('zombi').
+	zombiPlantasVsZombis('abanderado').
+	zombiPlantasVsZombis('caracono').
+	zombiPlantasVsZombis('saltador').
+	zombiPlantasVsZombis('caracubo').
+	zombiPlantasVsZombis('lector').
+	zombiPlantasVsZombis('portero').
+	zombiPlantasVsZombis('deportista').
+	zombiPlantasVsZombis('bailon').
+	zombiPlantasVsZombis('disco').
+	zombiPlantasVsZombis('extra').
+	zombiPlantasVsZombis('playero').
+	zombiPlantasVsZombis('buzon').
+	zombiPlantasVsZombis('zombictor').
+	zombiPlantasVsZombis('bobsleigh').
+	zombiPlantasVsZombis('delfin').
+	zombiPlantasVsZombis('cajita').
+	zombiPlantasVsZombis('globo').
+	zombiPlantasVsZombis('picado').
+	zombiPlantasVsZombis('saltarin').
+	zombiPlantasVsZombis('yeti').
+	zombiPlantasVsZombis('colgao').
+	zombiPlantasVsZombis('escalador').
+	zombiPlantasVsZombis('zombipulta').
+	zombiPlantasVsZombis('zombistein').
+	zombiPlantasVsZombis('megazombistein').
+	zombiPlantasVsZombis('zombidito').
+	zombiPlantasVsZombis('zomboss').
 
 
 	% ! -------------- Match y replace -----------------------
@@ -354,6 +861,90 @@ sistema:- writeln('Hola, soy tu sistema experto, puedes preguntarme sobre el Par
 		nth0(0, Resp, X),
 		X == flagEspecialistas,
 		especialistaEs(Atom, R).
+
+	% Minijuegos Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagMinijuegos,
+		minijuegoEs(Atom, R).
+
+	% Puzzles Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagPuzzles,
+		puzzleEs(Atom, R).
+
+	% Supervivencia Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagSupervivencias,
+		supervicenciaEs(Atom, R).
+
+	% Niveles Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagNiveles,
+		nivelEs(Atom, R).
+
+	% Personajes Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagPersonajes,
+		personajeEs(Atom, R).
+
+	% Tipos Plantas Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagTiposPlantas,
+		tipoPlantaEs(Atom, R).
+	
+	% PlantaTerrestre Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagPlantaTerrestre,
+		plantaTerrestreEs(Atom, R).
+
+	% PlantaProtectora Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagPlantaProtectora,
+		plantaProtectoraPlantasVsZombis(Atom, R).
+
+	% PlantaNoctura Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagPlantaNoctura,
+		plantaNocturaEs(Atom, R).
+
+	% PlantaAcuatica Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagPlantaAcuatica,
+		plantaAcuaticaEs(Atom, R).
+
+	% PlantaMejorada Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagPlantaMejorada,
+		plantaMejoradaEs(Atom, R).
+
+	% Zombis Plantas vs Zombis:
+	replace0([I|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagZombis,
+		zombiEs(Atom, R).
 
 	% cualquier otra cosa
 	replace0([I|Index], Input, N, Resp, R):-
