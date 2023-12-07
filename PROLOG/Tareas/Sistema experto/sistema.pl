@@ -94,6 +94,8 @@ sistema:- writeln('Hola, soy tu sistema experto, puedes preguntarme sobre el Par
 	template([s(_), es, un, sintoma, del, parkinson, '.'], [flagSintomas], [0]).
 	template([s(_), es, un, sintoma, del, parkinson, '?'], [flagSintomas], [0]).
 
+	template([tengo, s(_), ',', (_), y, (_), '.'], [flagMultiSintoma], [1, 3, 5]).
+
 	% Causas del parkinson 1
 	template([causas, '.'], ListaCausas, []):-
 		findall(Causas, causasParkinson(Causas), ListaCausas).
@@ -672,6 +674,11 @@ sistema:- writeln('Hola, soy tu sistema experto, puedes preguntarme sobre el Par
 	sintomasParkinson('rigidezMandibula').
 	sintomasParkinson('miedoACaer').
 
+	% Multisintoma
+	multiSintomaES(X, Y, Z, R):- multiSintoma(X, Y, Z), R = ['Claro', X, Y, y, Z, son, sintomas, de, parkinson].
+	multiSintomaES(X, Y, Z, R):- \+multiSintoma(X, Y, Z), R = ['No', X, Y, y, Z, no, son, sintomas, de, parkinson].
+	multiSintoma('amnesia', 'ansiedad', 'apatia').
+
 	% FlagCausas
 	causaEs(X, R):- causasParkinson(X), R = ['Si', X, es, una, causa, del, 'Parkinson'].
 	causaEs(X, R):- \+causasParkinson(X), R = ['No', X, no, es, una, causa, del, 'Parkinson'].
@@ -900,6 +907,19 @@ sistema:- writeln('Hola, soy tu sistema experto, puedes preguntarme sobre el Par
 		nth0(0, Resp, X),
 		X == flagSintomas,
 		sintomaEs(Atom, R).
+
+	% multiSintomas Parkinson:
+	replace0([I,J,K|_], Input, _, Resp, R):-
+		nth0(I, Input, Atom),
+		nth0(0, Resp, X),
+		X == flagMultiSintoma,
+		nth0(J, Input, Atom2),
+		nth0(0, Resp, Y),
+		Y == flagMultiSintoma,
+		nth0(K, Input, Atom3),
+		nth0(0, Resp, Z),
+		Z == flagMultiSintoma,
+		multiSintomaES(Atom, Atom2, Atom3, R).
 
 	% Causas Parkinson:
 	replace0([I|_], Input, _, Resp, R):-
