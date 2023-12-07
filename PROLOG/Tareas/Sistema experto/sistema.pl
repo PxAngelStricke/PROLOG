@@ -643,36 +643,34 @@ sistema:- writeln('Hola, soy tu sistema experto, puedes preguntarme sobre el Par
 	sintomaEs(X, R):- sintomasParkinson(X), R = ['Claro', X, es, un, sintoma, del, 'Parkinson', mas, sin, embargo, recuerda, que, el, 'Parkinson', requiere, diagnostico, medico].
 	sintomaEs(X, R):- \+sintomasParkinson(X), R = ['No', X, no, es, un, sintoma, del, 'Parkinson'].
 	sintomasParkinson('temblor de mano').
-	sintomasParkinson('lentitud de movimientos').
+	sintomasParkinson('lentitudDeMovimientos').
 	sintomasParkinson('rigidez').
-	sintomasParkinson('perdida del equilibrio').
-	sintomasParkinson('temblor en resposo').
-	sintomasParkinson('temblor en manos').
-	sintomasParkinson('temblor en miembros o postural').
-	sintomasParkinson('musculos rigidos').
-	sintomasParkinson('dificultad para caminar').
-	sintomasParkinson('dificultad para pararse').
-	sintomasParkinson('dificultad para mover el cuerpo').
-	sintomasParkinson('somnolencia diurna').
+	sintomasParkinson('perdidaDelEquilibrio').
+	sintomasParkinson('temblorEnResposo').
+	sintomasParkinson('temblorEnManos').
+	sintomasParkinson('temblorEnMiembros').
+	sintomasParkinson('musculosRigidos').
+	sintomasParkinson('dificultadCaminar').
+	sintomasParkinson('dificultadPararse').
+	sintomasParkinson('somnolenciaDiurna').
 	sintomasParkinson('pesadillas').
-	sintomasParkinson('sueño intranquilo').
-	sintomasParkinson('transtorno del sueño').
+	sintomasParkinson('sueñoIntranquilo').
+	sintomasParkinson('transtornoDeSueño').
 	sintomasParkinson('fatiga').
 	sintomasParkinson('agitacion').
 	sintomasParkinson('mareos').
 	sintomasParkinson('poco equilibrio').
 	sintomasParkinson('amnesia').
 	sintomasParkinson('demencia').
-	sintomasParkinson('dificultad para pensar').
-	sintomasParkinson('dificultad del habla').
-	sintomasParkinson('espasmos de la laringe').
+	sintomasParkinson('dificultadPensar').
+	sintomasParkinson('dificultadDelHabla').
+	sintomasParkinson('espasmosDeLaringe').
 	sintomasParkinson('ansiedad').
 	sintomasParkinson('apatia').
-	sintomasParkinson('perdida del olfato').
-	sintomasParkinson('escape de orina').
-	sintomasParkinson('goteo de orina').
-	sintomasParkinson('rigidez de la mandibula').
-	sintomasParkinson('miedo a caer').
+	sintomasParkinson('perdidaOlfato').
+	sintomasParkinson('goteoOrina').
+	sintomasParkinson('rigidezMandibula').
+	sintomasParkinson('miedoACaer').
 
 	% FlagCausas
 	causaEs(X, R):- causasParkinson(X), R = ['Si', X, es, una, causa, del, 'Parkinson'].
