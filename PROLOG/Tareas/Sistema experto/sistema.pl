@@ -709,24 +709,23 @@ sistema:- writeln('Hola, soy tu sistema experto, puedes preguntarme sobre el Par
 	minijuegosPlantasVsZombis('vegezombis').
 	minijuegosPlantasVsZombis('bolera').
 	minijuegosPlantasVsZombis('zombiquarium').
-	minijuegosPlantasVsZombis('semillas-caidas').
-	minijuegosPlantasVsZombis('¡Formen!-¡Arr!').
+	minijuegosPlantasVsZombis('semillasCaidas').
 	minijuegosPlantasVsZombis('tragaperras').
 	minijuegosPlantasVsZombis('bezombied').
-	minijuegosPlantasVsZombis('portal-combat').
+	minijuegosPlantasVsZombis('portalCombat').
 	minijuegosPlantasVsZombis('invisibles').
-	minijuegosPlantasVsZombis('ultimo-batallón').
-	minijuegosPlantasVsZombis('mola-mazo').
-	minijuegosPlantasVsZombis('vegezombis-2').
-	minijuegosPlantasVsZombis('bezombied-twist').
+	minijuegosPlantasVsZombis('ultimoBatallón').
+	minijuegosPlantasVsZombis('molaMazo').
+	minijuegosPlantasVsZombis('vegezombis2').
+	minijuegosPlantasVsZombis('bezombiedTwist').
 	minijuegosPlantasVsZombis('saltimbanquis').
-	minijuegosPlantasVsZombis('zombis-zumbaos').
+	minijuegosPlantasVsZombis('zombisZumbaos').
 
 	% FlagPuzzlez
 	puzzleEs(X, R):- puzzlesPlantasVsZombis(X), R = ['Si', X, es, un, puzzle, de, 'Plantas vs Zombis'].
 	puzzleEs(X, R):- \+puzzlesPlantasVsZombis(X), R = ['No', X, no, es, un, puzzle, de, 'Plantas vs Zombis'].
-	puzzlesPlantasVsZombis('yo-zombi').
-	puzzlesPlantasVsZombis('ultimo-batallon').
+	puzzlesPlantasVsZombis('yoZombi').
+	puzzlesPlantasVsZombis('ultimoBatallon').
 	puzzlesPlantasVsZombis('rompejarrones').
 
 	% FlagSupervivencia
